@@ -1,0 +1,192 @@
+{
+  "sequence": "09",
+  "window": [
+    1100,
+    1199
+  ],
+  "frames_evaluated": 100,
+  "interior_frames": 80,
+  "pose_source": "semantickitti",
+  "config": {
+    "neighbor_offsets": [
+      -10,
+      -6,
+      -3,
+      3,
+      6,
+      10
+    ],
+    "min_range": 3.0,
+    "max_range": 50.0,
+    "tau_abs": 0.5,
+    "tau_rel": 0.02,
+    "window_half_rows": 1,
+    "window_half_cols": 2,
+    "min_votes": 2,
+    "min_ratio": 0.5,
+    "ground_cell": 1.0,
+    "ground_height": 0.25,
+    "cluster_radius": 0.5,
+    "min_cluster_points": 10,
+    "grow_radius": 0.5,
+    "grow_min_ratio": 0.2,
+    "grow_iterations": 0,
+    "grow_require_vote": true,
+    "spec": {
+      "height": 64,
+      "width": 2048,
+      "fov_up_deg": 3.0,
+      "fov_down_deg": -25.0
+    }
+  },
+  "runtime_s_per_frame": {
+    "mean": 0.08687134600477293,
+    "max": 0.2730591999134049
+  },
+  "final_all": {
+    "points_all": {
+      "tp": 57298,
+      "fp": 9726,
+      "fn": 20112,
+      "tn": 12114615,
+      "iou_moving": 0.6575697759823724,
+      "precision": 0.8548878013845786,
+      "recall": 0.7401886061232399,
+      "f1": 0.7934142930334963,
+      "static_fp_rate": 0.0008021879292243595
+    },
+    "points_in_range": {
+      "tp": 57298,
+      "fp": 9726,
+      "fn": 10724,
+      "tn": 12073971,
+      "iou_moving": 0.7369707259350723,
+      "precision": 0.8548878013845786,
+      "recall": 0.8423451236364705,
+      "f1": 0.8485701168490736,
+      "static_fp_rate": 0.0008048861205308276
+    },
+    "objects": {
+      "object_frames": 290,
+      "object_frames_detected": 199,
+      "object_frame_detection_rate": 0.6862068965517242,
+      "mean_object_point_recall": 0.5962160723044115,
+      "instances": 8,
+      "instances_detected_in_majority_of_frames": 5
+    },
+    "false_positives_by_class": {
+      "fence": {
+        "points": 2461,
+        "share": 0.253
+      },
+      "car": {
+        "points": 2068,
+        "share": 0.2126
+      },
+      "pole": {
+        "points": 1785,
+        "share": 0.1835
+      },
+      "other-object": {
+        "points": 1357,
+        "share": 0.1395
+      },
+      "other-structure": {
+        "points": 836,
+        "share": 0.086
+      },
+      "vegetation": {
+        "points": 386,
+        "share": 0.0397
+      },
+      "traffic-sign": {
+        "points": 296,
+        "share": 0.0304
+      },
+      "trunk": {
+        "points": 215,
+        "share": 0.0221
+      },
+      "person": {
+        "points": 148,
+        "share": 0.0152
+      },
+      "building": {
+        "points": 116,
+        "share": 0.0119
+      },
+      "road": {
+        "points": 48,
+        "share": 0.0049
+      },
+      "sidewalk": {
+        "points": 10,
+        "share": 0.001
+      }
+    }
+  },
+  "final_interior": {
+    "points_all": {
+      "tp": 33288,
+      "fp": 7524,
+      "fn": 8112,
+      "tn": 9703089,
+      "iou_moving": 0.6804022565611969,
+      "precision": 0.8156424581005587,
+      "recall": 0.8040579710144927,
+      "f1": 0.8098087870383885,
+      "static_fp_rate": 0.000774822351585837
+    },
+    "points_in_range": {
+      "tp": 33288,
+      "fp": 7524,
+      "fn": 8112,
+      "tn": 9664630,
+      "iou_moving": 0.6804022565611969,
+      "precision": 0.8156424581005587,
+      "recall": 0.8040579710144927,
+      "f1": 0.8098087870383885,
+      "static_fp_rate": 0.0007779032467845322
+    },
+    "objects": {
+      "object_frames": 225,
+      "object_frames_detected": 158,
+      "object_frame_detection_rate": 0.7022222222222222,
+      "mean_object_point_recall": 0.6176164547325145,
+      "instances": 7,
+      "instances_detected_in_majority_of_frames": 5
+    }
+  },
+  "votes_only_all": {
+    "points_all": {
+      "tp": 58901,
+      "fp": 15742,
+      "fn": 18509,
+      "tn": 12108599,
+      "iou_moving": 0.6323106320851941,
+      "precision": 0.7891027959755101,
+      "recall": 0.7608965249967704,
+      "f1": 0.7747430172374107,
+      "static_fp_rate": 0.0012983798459644117
+    },
+    "points_in_range": {
+      "tp": 58901,
+      "fp": 15742,
+      "fn": 9121,
+      "tn": 12067955,
+      "iou_moving": 0.7031779762189008,
+      "precision": 0.7891027959755101,
+      "recall": 0.865911028784805,
+      "f1": 0.825724599586444,
+      "static_fp_rate": 0.0013027469987041218
+    },
+    "objects": {
+      "object_frames": 290,
+      "object_frames_detected": 204,
+      "object_frame_detection_rate": 0.7034482758620689,
+      "mean_object_point_recall": 0.6598655262985524,
+      "instances": 8,
+      "instances_detected_in_majority_of_frames": 5
+    }
+  }
+}

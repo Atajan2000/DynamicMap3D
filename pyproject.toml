@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+license = { file = "LICENSE" }
+name = "dynamicmap3d"
+version = "0.1.0"
+description = "Temporal geometric moving-point detection for LiDAR mapping on SemanticKITTI"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0", "scipy>=1.13", "pyyaml>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["realdata: requires the downloaded SemanticKITTI development window"]

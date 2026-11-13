@@ -1,0 +1,603 @@
+{
+  "window": "development",
+  "role": "development (tuning allowed)",
+  "sequence": "09",
+  "frames": [
+    1100,
+    1199
+  ],
+  "n_frames": 100,
+  "n_interior_frames": 80,
+  "interior_frame_range": [
+    1110,
+    1189
+  ],
+  "points_total": 12383364,
+  "points_ignored_label": 181613,
+  "points_evaluated": 12201751,
+  "points_in_detector_range": 12151719,
+  "frozen_config_sha256": "f85737f03228bb0d7a48eaa165d9bd1101ccce46b90945fd299e99566d55653b",
+  "causality": "offline, non-causal: uses scans up to +10 frames (1.0 s) in the future",
+  "boundary_handling": "neighbours restricted to window frames; edge frames use fewer neighbours",
+  "neighbors_used_histogram": {
+    "3": 6,
+    "4": 6,
+    "5": 8,
+    "6": 80
+  },
+  "deterministic_rerun_identical": true,
+  "prediction_sha256": {
+    "temporal_detector": "3273e03f554a58883c1c17ae3b6232bc9cf328baa9c4b4a549488bee3a61d5c6",
+    "votes_only": "6304d3c74ab1e5408d6fab3963eb460fd48fe7e619b1c53cad03074616c4f328"
+  },
+  "point_metrics": {
+    "raw_unfiltered": {
+      "all_frames": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 77410,
+        "tn": 12124341,
+        "n_moving_gt": 77410,
+        "n_static_gt": 12124341,
+        "iou_moving": 0.0,
+        "iou_static": 0.9936558285773902,
+        "precision": NaN,
+        "recall": 0.0,
+        "f1": NaN,
+        "static_fp_rate": 0.0,
+        "moving_removal_rate": 0.0
+      },
+      "interior_frames": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 41400,
+        "tn": 9710613,
+        "n_moving_gt": 41400,
+        "n_static_gt": 9710613,
+        "iou_moving": 0.0,
+        "iou_static": 0.995754722640341,
+        "precision": NaN,
+        "recall": 0.0,
+        "f1": NaN,
+        "static_fp_rate": 0.0,
+        "moving_removal_rate": 0.0
+      },
+      "in_range_all_frames": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 68022,
+        "tn": 12083697,
+        "n_moving_gt": 68022,
+        "n_static_gt": 12083697,
+        "iou_moving": 0.0,
+        "iou_static": 0.9944022734561259,
+        "precision": NaN,
+        "recall": 0.0,
+        "f1": NaN,
+        "static_fp_rate": 0.0,
+        "moving_removal_rate": 0.0
+      }
+    },
+    "temporal_detector": {
+      "all_frames": {
+        "tp": 57298,
+        "fp": 9726,
+        "fn": 20112,
+        "tn": 12114615,
+        "n_moving_gt": 77410,
+        "n_static_gt": 12124341,
+        "iou_moving": 0.6575697759823724,
+        "iou_static": 0.9975430758388212,
+        "precision": 0.8548878013845786,
+        "recall": 0.7401886061232399,
+        "f1": 0.7934142930334963,
+        "static_fp_rate": 0.0008021879292243595,
+        "moving_removal_rate": 0.7401886061232399
+      },
+      "interior_frames": {
+        "tp": 33288,
+        "fp": 7524,
+        "fn": 8112,
+        "tn": 9703089,
+        "n_moving_gt": 41400,
+        "n_static_gt": 9710613,
+        "iou_moving": 0.6804022565611969,
+        "iou_static": 0.9983911469868733,
+        "precision": 0.8156424581005587,
+        "recall": 0.8040579710144927,
+        "f1": 0.8098087870383885,
+        "static_fp_rate": 0.000774822351585837,
+        "moving_removal_rate": 0.8040579710144927
+      },
+      "in_range_all_frames": {
+        "tp": 57298,
+        "fp": 9726,
+        "fn": 10724,
+        "tn": 12073971,
+        "n_moving_gt": 68022,
+        "n_static_gt": 12083697,
+        "iou_moving": 0.7369707259350723,
+        "iou_static": 0.9983091377421044,
+        "precision": 0.8548878013845786,
+        "recall": 0.8423451236364705,
+        "f1": 0.8485701168490736,
+        "static_fp_rate": 0.0008048861205308276,
+        "moving_removal_rate": 0.8423451236364705
+      }
+    },
+    "votes_only": {
+      "all_frames": {
+        "tp": 58901,
+        "fp": 15742,
+        "fn": 18509,
+        "tn": 12108599,
+        "n_moving_gt": 77410,
+        "n_static_gt": 12124341,
+        "iou_moving": 0.6323106320851941,
+        "iou_static": 0.9971793277525457,
+        "precision": 0.7891027959755101,
+        "recall": 0.7608965249967704,
+        "f1": 0.7747430172374107,
+        "static_fp_rate": 0.0012983798459644117,
+        "moving_removal_rate": 0.7608965249967704
+      },
+      "interior_frames": {
+        "tp": 34560,
+        "fp": 12489,
+        "fn": 6840,
+        "tn": 9698124,
+        "n_moving_gt": 41400,
+        "n_static_gt": 9710613,
+        "iou_moving": 0.6413182653231643,
+        "iou_static": 0.9980108985348322,
+        "precision": 0.7345533380093094,
+        "recall": 0.8347826086956521,
+        "f1": 0.7814672862327442,
+        "static_fp_rate": 0.001286118600339649,
+        "moving_removal_rate": 0.8347826086956521
+      },
+      "in_range_all_frames": {
+        "tp": 58901,
+        "fp": 15742,
+        "fn": 9121,
+        "tn": 12067955,
+        "n_moving_gt": 68022,
+        "n_static_gt": 12083697,
+        "iou_moving": 0.7031779762189008,
+        "iou_static": 0.9979439862569668,
+        "precision": 0.7891027959755101,
+        "recall": 0.865911028784805,
+        "f1": 0.825724599586444,
+        "static_fp_rate": 0.0013027469987041218,
+        "moving_removal_rate": 0.865911028784805
+      }
+    },
+    "oracle_labels": {
+      "all_frames": {
+        "tp": 77410,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12124341,
+        "n_moving_gt": 77410,
+        "n_static_gt": 12124341,
+        "iou_moving": 1.0,
+        "iou_static": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "static_fp_rate": 0.0,
+        "moving_removal_rate": 1.0
+      },
+      "interior_frames": {
+        "tp": 41400,
+        "fp": 0,
+        "fn": 0,
+        "tn": 9710613,
+        "n_moving_gt": 41400,
+        "n_static_gt": 9710613,
+        "iou_moving": 1.0,
+        "iou_static": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "static_fp_rate": 0.0,
+        "moving_removal_rate": 1.0
+      },
+      "in_range_all_frames": {
+        "tp": 68022,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12083697,
+        "n_moving_gt": 68022,
+        "n_static_gt": 12083697,
+        "iou_moving": 1.0,
+        "iou_static": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "static_fp_rate": 0.0,
+        "moving_removal_rate": 1.0
+      }
+    }
+  },
+  "class_false_removal": {
+    "temporal_detector": {
+      "building": {
+        "points": 1925447,
+        "removed": 116,
+        "false_removal_rate": 6.0245750726974045e-05
+      },
+      "fence": {
+        "points": 1147995,
+        "removed": 2461,
+        "false_removal_rate": 0.0021437375598325776
+      },
+      "other-structure": {
+        "points": 74030,
+        "removed": 836,
+        "false_removal_rate": 0.011292719167904903
+      },
+      "vegetation": {
+        "points": 2316252,
+        "removed": 386,
+        "false_removal_rate": 0.0001666485339246334
+      },
+      "trunk": {
+        "points": 35786,
+        "removed": 215,
+        "false_removal_rate": 0.00600793606438272
+      },
+      "terrain": {
+        "points": 237768,
+        "removed": 0,
+        "false_removal_rate": 0.0
+      },
+      "pole": {
+        "points": 67658,
+        "removed": 1785,
+        "false_removal_rate": 0.02638268940849567
+      },
+      "traffic-sign": {
+        "points": 61059,
+        "removed": 296,
+        "false_removal_rate": 0.004847770189488855
+      },
+      "road": {
+        "points": 2977215,
+        "removed": 48,
+        "false_removal_rate": 1.6122450007809312e-05
+      },
+      "parking": {
+        "points": 13877,
+        "removed": 0,
+        "false_removal_rate": 0.0
+      },
+      "sidewalk": {
+        "points": 2693967,
+        "removed": 10,
+        "false_removal_rate": 3.7119979569163245e-06
+      },
+      "other-ground": {
+        "points": 5596,
+        "removed": 0,
+        "false_removal_rate": 0.0
+      },
+      "parked-car": {
+        "points": 367326,
+        "removed": 2068,
+        "false_removal_rate": 0.005629876458513691
+      },
+      "parked-motorcycle": {
+        "points": 6508,
+        "removed": 0,
+        "false_removal_rate": 0.0
+      },
+      "parked-other-vehicle": {
+        "points": 671,
+        "removed": 0,
+        "false_removal_rate": 0.0
+      }
+    },
+    "votes_only": {
+      "building": {
+        "points": 1925447,
+        "removed": 368,
+        "false_removal_rate": 0.00019112445058212457
+      },
+      "fence": {
+        "points": 1147995,
+        "removed": 4238,
+        "false_removal_rate": 0.003691653709293159
+      },
+      "other-structure": {
+        "points": 74030,
+        "removed": 1242,
+        "false_removal_rate": 0.01677698230447116
+      },
+      "vegetation": {
+        "points": 2316252,
+        "removed": 2205,
+        "false_removal_rate": 0.0009519689567456391
+      },
+      "trunk": {
+        "points": 35786,
+        "removed": 338,
+        "false_removal_rate": 0.009445034370983065
+      },
+      "terrain": {
+        "points": 237768,
+        "removed": 13,
+        "false_removal_rate": 5.467514552000269e-05
+      },
+      "pole": {
+        "points": 67658,
+        "removed": 2068,
+        "false_removal_rate": 0.030565491146649325
+      },
+      "traffic-sign": {
+        "points": 61059,
+        "removed": 429,
+        "false_removal_rate": 0.007025991254360537
+      },
+      "road": {
+        "points": 2977215,
+        "removed": 69,
+        "false_removal_rate": 2.3176021886225887e-05
+      },
+      "parking": {
+        "points": 13877,
+        "removed": 0,
+        "false_removal_rate": 0.0
+      },
+      "sidewalk": {
+        "points": 2693967,
+        "removed": 38,
+        "false_removal_rate": 1.4105592236282033e-05
+      },
+      "other-ground": {
+        "points": 5596,
+        "removed": 0,
+        "false_removal_rate": 0.0
+      },
+      "parked-car": {
+        "points": 367326,
+        "removed": 2677,
+        "false_removal_rate": 0.007287804293733631
+      },
+      "parked-motorcycle": {
+        "points": 6508,
+        "removed": 19,
+        "false_removal_rate": 0.0029194837123540257
+      },
+      "parked-other-vehicle": {
+        "points": 671,
+        "removed": 6,
+        "false_removal_rate": 0.00894187779433681
+      }
+    }
+  },
+  "occlusion_boundaries": {
+    "temporal_detector": {
+      "static_on_depth_boundary": {
+        "points": 2469669,
+        "removed": 5508,
+        "false_removal_rate": 0.002230258386852651
+      },
+      "static_off_boundary": {
+        "points": 9654672,
+        "removed": 4218,
+        "false_removal_rate": 0.00043688692893968845
+      },
+      "moving_on_depth_boundary": {
+        "points": 14114,
+        "recall": 0.6825138160691512
+      }
+    },
+    "votes_only": {
+      "static_on_depth_boundary": {
+        "points": 2469669,
+        "removed": 10317,
+        "false_removal_rate": 0.004177482893456572
+      },
+      "static_off_boundary": {
+        "points": 9654672,
+        "removed": 5425,
+        "false_removal_rate": 0.0005619041226879588
+      },
+      "moving_on_depth_boundary": {
+        "points": 14114,
+        "recall": 0.7561286665721978
+      }
+    }
+  },
+  "objects": {
+    "temporal_detector": {
+      "moving_all": {
+        "object_frames": 290,
+        "object_frames_detected": 199,
+        "object_frame_coverage": 0.6862068965517242,
+        "mean_point_recall": 0.5962160723044115,
+        "instances": 8,
+        "instances_detected_in_majority_of_frames": 5
+      },
+      "moving_by_class": {
+        "moving-car": {
+          "object_frames": 180,
+          "object_frames_detected": 175,
+          "object_frame_coverage": 0.9722222222222222,
+          "mean_point_recall": 0.8285580483909936,
+          "instances": 5,
+          "instances_detected_in_majority_of_frames": 5
+        },
+        "moving-person": {
+          "object_frames": 110,
+          "object_frames_detected": 24,
+          "object_frame_coverage": 0.21818181818181817,
+          "mean_point_recall": 0.21602011143545916,
+          "instances": 3,
+          "instances_detected_in_majority_of_frames": 0
+        }
+      },
+      "moving_by_speed": {
+        "slow <1.5 m/s": {
+          "object_frames": 110,
+          "object_frames_detected": 24,
+          "object_frame_coverage": 0.21818181818181817,
+          "mean_point_recall": 0.21602011143545916,
+          "instances": 3,
+          "instances_detected_in_majority_of_frames": 0
+        },
+        "1.5-5 m/s": {
+          "object_frames": 0
+        },
+        "fast >=5 m/s": {
+          "object_frames": 180,
+          "object_frames_detected": 175,
+          "object_frame_coverage": 0.9722222222222222,
+          "mean_point_recall": 0.8285580483909936,
+          "instances": 5,
+          "instances_detected_in_majority_of_frames": 5
+        }
+      },
+      "moving_unknown_speed_object_frames": 0,
+      "parked_vehicles": {
+        "object_frames": 584,
+        "instances": 21,
+        "mean_flagged_fraction": 0.0016890561489121309,
+        "object_frames_falsely_removed_ge50pct": 0,
+        "object_frames_touched_ge10pct": 1,
+        "object_frames_untouched": 538
+      }
+    },
+    "votes_only": {
+      "moving_all": {
+        "object_frames": 290,
+        "object_frames_detected": 204,
+        "object_frame_coverage": 0.7034482758620689,
+        "mean_point_recall": 0.6598655262985524,
+        "instances": 8,
+        "instances_detected_in_majority_of_frames": 5
+      },
+      "moving_by_class": {
+        "moving-car": {
+          "object_frames": 180,
+          "object_frames_detected": 177,
+          "object_frame_coverage": 0.9833333333333333,
+          "mean_point_recall": 0.9000967969230829,
+          "instances": 5,
+          "instances_detected_in_majority_of_frames": 5
+        },
+        "moving-person": {
+          "object_frames": 110,
+          "object_frames_detected": 27,
+          "object_frame_coverage": 0.24545454545454545,
+          "mean_point_recall": 0.26675981073113914,
+          "instances": 3,
+          "instances_detected_in_majority_of_frames": 0
+        }
+      },
+      "moving_by_speed": {
+        "slow <1.5 m/s": {
+          "object_frames": 110,
+          "object_frames_detected": 27,
+          "object_frame_coverage": 0.24545454545454545,
+          "mean_point_recall": 0.26675981073113914,
+          "instances": 3,
+          "instances_detected_in_majority_of_frames": 0
+        },
+        "1.5-5 m/s": {
+          "object_frames": 0
+        },
+        "fast >=5 m/s": {
+          "object_frames": 180,
+          "object_frames_detected": 177,
+          "object_frame_coverage": 0.9833333333333333,
+          "mean_point_recall": 0.9000967969230829,
+          "instances": 5,
+          "instances_detected_in_majority_of_frames": 5
+        }
+      },
+      "moving_unknown_speed_object_frames": 0,
+      "parked_vehicles": {
+        "object_frames": 584,
+        "instances": 21,
+        "mean_flagged_fraction": 0.00523453082624928,
+        "object_frames_falsely_removed_ge50pct": 0,
+        "object_frames_touched_ge10pct": 5,
+        "object_frames_untouched": 432
+      }
+    }
+  },
+  "mapping": {
+    "raw_unfiltered": {
+      "resolution_m": 0.2,
+      "points_inserted": 12165962,
+      "occupied_voxels": 369724,
+      "contaminated_voxels": 16600,
+      "contaminated_voxel_fraction": 0.04489835661195919,
+      "moving_points_retained": 68022,
+      "moving_points_total": 68022,
+      "static_points_kept": 12083697,
+      "static_point_retention": 1.0,
+      "static_voxels": 348772,
+      "static_coverage": 1.0,
+      "map_build_s": 6.950436800019816
+    },
+    "temporal_detector": {
+      "resolution_m": 0.2,
+      "points_inserted": 12098291,
+      "occupied_voxels": 356268,
+      "contaminated_voxels": 3718,
+      "contaminated_voxel_fraction": 0.010435963937260715,
+      "moving_points_retained": 10724,
+      "moving_points_total": 68022,
+      "static_points_kept": 12073971,
+      "static_point_retention": 0.9991951138794691,
+      "static_voxels": 348365,
+      "static_coverage": 0.9988330485245375,
+      "map_build_s": 6.57470190001186
+    },
+    "votes_only": {
+      "resolution_m": 0.2,
+      "points_inserted": 12090319,
+      "occupied_voxels": 354063,
+      "contaminated_voxels": 2448,
+      "contaminated_voxel_fraction": 0.006914023775429797,
+      "moving_points_retained": 9121,
+      "moving_points_total": 68022,
+      "static_points_kept": 12067955,
+      "static_point_retention": 0.9986972530012959,
+      "static_voxels": 347581,
+      "static_coverage": 0.996585161652885,
+      "map_build_s": 6.459350200020708
+    },
+    "oracle_labels": {
+      "resolution_m": 0.2,
+      "points_inserted": 12097940,
+      "occupied_voxels": 353506,
+      "contaminated_voxels": 0,
+      "contaminated_voxel_fraction": 0.0,
+      "moving_points_retained": 0,
+      "moving_points_total": 68022,
+      "static_points_kept": 12083697,
+      "static_point_retention": 1.0,
+      "static_voxels": 348772,
+      "static_coverage": 1.0,
+      "map_build_s": 6.411690899985842
+    }
+  },
+  "mapping_note": "points 3-50 m from the sensor, 0.2 m voxels, SemanticKITTI poses; methods differ only in removed points. Fewer points is not by itself better map quality.",
+  "runtime": {
+    "detect_s_per_frame_mean": 0.07585080100223422,
+    "detect_s_per_frame_median": 0.07656934997066855,
+    "detect_s_per_frame_p95": 0.08853502998244948,
+    "detect_s_per_frame_max": 0.17909079999662936,
+    "window_load_s": 0.07813849998638034
+  },
+  "memory": {
+    "peak_rss_after_load_MB": 267.849728,
+    "peak_rss_after_detection_MB": 532.5824,
+    "peak_rss_end_MB": 674.967552,
+    "scans_in_memory_MB": 198.133824
+  }
+}

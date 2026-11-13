@@ -1,0 +1,85 @@
+frozen_before_algorithm_runs: true
+policy: Parameters may be tuned ONLY on the development window. Evaluation windows
+  are selected from annotation statistics before any detector run and are reported
+  once.
+selection_criteria:
+  window_length: 100
+  min_object_points: 50
+  min_object_frames: 10
+  constraints: coverage>=0.6, persistent movers>=2, moving_frac<=0.05, ego speed 1-12
+    m/s, structure_frac>=0.15
+  score: min(veh,5)+min(vru,5)+2*diversity+2*coverage+2*min(static_movable/0.03,1)+min(structure/0.3,1)
+development:
+  role: development (tuning allowed)
+  sequence: 09
+  first_frame: 1100
+  last_frame: 1199
+  stats:
+    score: 12.98
+    coverage: 0.99
+    persistent_vehicles: 5
+    persistent_vru: 1
+    persistent_by_class:
+      moving-car: 5
+      moving-person: 1
+    moving_frac: 0.0063
+    structure_frac: 0.4666
+    static_movable_frac: 0.0337
+    ego_speed_mean: 9.2803
+    moving_points: 77410
+  velodyne_bytes: 198133824
+evaluation:
+- role: held-out, seq 08 best overall
+  sequence: 08
+  first_frame: 0
+  last_frame: 99
+  stats:
+    score: 14.4021
+    coverage: 1.0
+    persistent_vehicles: 4
+    persistent_vru: 6
+    persistent_by_class:
+      moving-car: 4
+      moving-bicyclist: 2
+      moving-person: 4
+    moving_frac: 0.0377
+    structure_frac: 0.253
+    static_movable_frac: 0.0084
+    ego_speed_mean: 4.6574
+    moving_points: 462853
+- role: held-out, seq 08 most moving pedestrians/cyclists
+  sequence: 08
+  first_frame: 1850
+  last_frame: 1949
+  stats:
+    score: 13.0
+    coverage: 1.0
+    persistent_vehicles: 1
+    persistent_vru: 8
+    persistent_by_class:
+      moving-car: 1
+      moving-bicyclist: 2
+      moving-person: 6
+    moving_frac: 0.0039
+    structure_frac: 0.3268
+    static_movable_frac: 0.0558
+    ego_speed_mean: 6.6757
+    moving_points: 48210
+- role: held-out, different sequence from development
+  sequence: '07'
+  first_frame: 600
+  last_frame: 699
+  stats:
+    score: 12.92
+    coverage: 0.96
+    persistent_vehicles: 6
+    persistent_vru: 1
+    persistent_by_class:
+      moving-car: 5
+      moving-person: 1
+      moving-truck: 1
+    moving_frac: 0.0268
+    structure_frac: 0.4961
+    static_movable_frac: 0.0722
+    ego_speed_mean: 3.4787
+    moving_points: 328273

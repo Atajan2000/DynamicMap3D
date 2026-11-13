@@ -1,0 +1,42 @@
+# Datasets and downloads are never committed (KITTI / SemanticKITTI: CC BY-NC-SA 3.0)
+data/
+*.zip
+*.bin
+*.label
+
+# Generated per-point outputs (summaries in results/ are small and may be committed)
+results/**/*.npy
+results/**/*.npz
+
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+
+# Local secrets, caches, logs, private notes and generated exports
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*
+secrets*
+Task.txt
+*.log
+*.tmp
+*.bak
+*.rrd
+*.ply
+*.pcd
+.mypy_cache/
+.ruff_cache/
+
+# Four reviewed viewer prediction files are small enough for this release
+!results/phase3/predictions/development.npz
+!results/phase3/predictions/eval0.npz
+!results/phase3/predictions/eval1.npz
+!results/phase3/predictions/eval2.npz
+
+# Local demo recordings and capture intermediates
+results/demo/
+assets/demo/*.mp4

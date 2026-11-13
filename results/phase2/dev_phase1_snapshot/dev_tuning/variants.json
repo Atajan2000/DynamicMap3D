@@ -1,0 +1,122 @@
+{
+  "v0 baseline (grow into unobserved, cluster>=20)": {
+    "points_all": {
+      "tp": 58975,
+      "fp": 26043,
+      "fn": 18435,
+      "tn": 12098298,
+      "iou_moving": 0.5700656336693958,
+      "precision": 0.6936766331835611,
+      "recall": 0.7618524738405891,
+      "f1": 0.7261679020858471,
+      "static_fp_rate": 0.0021479930331883604
+    },
+    "objects": {
+      "object_frames": 290,
+      "object_frames_detected": 175,
+      "object_frame_detection_rate": 0.603448275862069,
+      "mean_object_point_recall": 0.534581199903963,
+      "instances": 8,
+      "instances_detected_in_majority_of_frames": 4
+    },
+    "overrides": {
+      "grow_require_vote": false
+    }
+  },
+  "v1 grow requires vote, cluster>=20": {
+    "points_all": {
+      "tp": 58951,
+      "fp": 23397,
+      "fn": 18459,
+      "tn": 12100944,
+      "iou_moving": 0.5847907387383813,
+      "precision": 0.7158765240200127,
+      "recall": 0.761542436377729,
+      "f1": 0.738003730642597,
+      "static_fp_rate": 0.0019297543676806846
+    },
+    "objects": {
+      "object_frames": 290,
+      "object_frames_detected": 175,
+      "object_frame_detection_rate": 0.603448275862069,
+      "mean_object_point_recall": 0.5337399642621902,
+      "instances": 8,
+      "instances_detected_in_majority_of_frames": 4
+    },
+    "overrides": {
+      "grow_require_vote": true
+    }
+  },
+  "v2 grow requires vote, cluster>=10": {
+    "points_all": {
+      "tp": 60326,
+      "fp": 32042,
+      "fn": 17084,
+      "tn": 12092299,
+      "iou_moving": 0.5511639805576873,
+      "precision": 0.6531049714186732,
+      "recall": 0.7793049993540886,
+      "f1": 0.7106456666941535,
+      "static_fp_rate": 0.002642782811865816
+    },
+    "objects": {
+      "object_frames": 290,
+      "object_frames_detected": 213,
+      "object_frame_detection_rate": 0.7344827586206897,
+      "mean_object_point_recall": 0.6556457149486119,
+      "instances": 8,
+      "instances_detected_in_majority_of_frames": 5
+    },
+    "overrides": {
+      "grow_require_vote": true,
+      "min_cluster_points": 10
+    }
+  },
+  "v3 no growth, cluster>=10": {
+    "points_all": {
+      "tp": 57298,
+      "fp": 9726,
+      "fn": 20112,
+      "tn": 12114615,
+      "iou_moving": 0.6575697759823724,
+      "precision": 0.8548878013845786,
+      "recall": 0.7401886061232399,
+      "f1": 0.7934142930334963,
+      "static_fp_rate": 0.0008021879292243595
+    },
+    "objects": {
+      "object_frames": 290,
+      "object_frames_detected": 199,
+      "object_frame_detection_rate": 0.6862068965517242,
+      "mean_object_point_recall": 0.5962160723044115,
+      "instances": 8,
+      "instances_detected_in_majority_of_frames": 5
+    },
+    "overrides": {
+      "grow_iterations": 0,
+      "min_cluster_points": 10
+    }
+  },
+  "v4 votes only (no refinement)": {
+    "points_all": {
+      "tp": 58901,
+      "fp": 15742,
+      "fn": 18509,
+      "tn": 12108599,
+      "iou_moving": 0.6323106320851941,
+      "precision": 0.7891027959755101,
+      "recall": 0.7608965249967704,
+      "f1": 0.7747430172374107,
+      "static_fp_rate": 0.0012983798459644117
+    },
+    "objects": {
+      "object_frames": 290,
+      "object_frames_detected": 204,
+      "object_frame_detection_rate": 0.7034482758620689,
+      "mean_object_point_recall": 0.6598655262985524,
+      "instances": 8,
+      "instances_detected_in_majority_of_frames": 5
+    },
+    "overrides": null
+  }
+}

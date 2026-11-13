@@ -1,0 +1,2254 @@
+{
+  "aggregation": "pooled point metrics  = metrics recomputed from SUMMED confusion counts over the three held-out\n                          windows (micro-average; every evaluated point weighs equally)\n  macro mean            = unweighted mean of per-window IoU/F1, reported only as a secondary number\n  pooled objects        = summed object-frame counts; pooled map counts = summed voxel/point counts\n                          (windows are spatially disjoint, so voxel counts add)",
+  "frozen_config_sha256": {
+    "development": "f85737f03228bb0d7a48eaa165d9bd1101ccce46b90945fd299e99566d55653b",
+    "eval0": "f85737f03228bb0d7a48eaa165d9bd1101ccce46b90945fd299e99566d55653b",
+    "eval1": "f85737f03228bb0d7a48eaa165d9bd1101ccce46b90945fd299e99566d55653b",
+    "eval2": "f85737f03228bb0d7a48eaa165d9bd1101ccce46b90945fd299e99566d55653b"
+  },
+  "deterministic": {
+    "development": true,
+    "eval0": true,
+    "eval1": true,
+    "eval2": true
+  },
+  "windows": {
+    "development": {
+      "role": "development (tuning allowed)",
+      "sequence": "09",
+      "frames": [
+        1100,
+        1199
+      ],
+      "points_total": 12383364,
+      "points_evaluated": 12201751,
+      "points_ignored_label": 181613,
+      "moving_points": 77410,
+      "interior_frames": 80
+    },
+    "eval0": {
+      "role": "held-out, seq 08 best overall",
+      "sequence": "08",
+      "frames": [
+        0,
+        99
+      ],
+      "points_total": 12262418,
+      "points_evaluated": 11638376,
+      "points_ignored_label": 624042,
+      "moving_points": 462853,
+      "interior_frames": 80
+    },
+    "eval1": {
+      "role": "held-out, seq 08 most moving pedestrians/cyclists",
+      "sequence": "08",
+      "frames": [
+        1850,
+        1949
+      ],
+      "points_total": 12283750,
+      "points_evaluated": 11962882,
+      "points_ignored_label": 320868,
+      "moving_points": 48210,
+      "interior_frames": 80
+    },
+    "eval2": {
+      "role": "held-out, different sequence from development",
+      "sequence": "07",
+      "frames": [
+        600,
+        699
+      ],
+      "points_total": 12261854,
+      "points_evaluated": 12019671,
+      "points_ignored_label": 242183,
+      "moving_points": 328273,
+      "interior_frames": 80
+    }
+  },
+  "point_metrics": {
+    "raw_unfiltered": {
+      "development": {
+        "all_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 77410,
+          "tn": 12124341,
+          "n_moving_gt": 77410,
+          "n_static_gt": 12124341,
+          "iou_moving": 0.0,
+          "iou_static": 0.9936558285773902,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        },
+        "interior_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 41400,
+          "tn": 9710613,
+          "n_moving_gt": 41400,
+          "n_static_gt": 9710613,
+          "iou_moving": 0.0,
+          "iou_static": 0.995754722640341,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        },
+        "in_range_all_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 68022,
+          "tn": 12083697,
+          "n_moving_gt": 68022,
+          "n_static_gt": 12083697,
+          "iou_moving": 0.0,
+          "iou_static": 0.9944022734561259,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        }
+      },
+      "eval0": {
+        "all_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 462853,
+          "tn": 11175523,
+          "n_moving_gt": 462853,
+          "n_static_gt": 11175523,
+          "iou_moving": 0.0,
+          "iou_static": 0.960230447959406,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        },
+        "interior_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 410224,
+          "tn": 8877088,
+          "n_moving_gt": 410224,
+          "n_static_gt": 8877088,
+          "iou_moving": 0.0,
+          "iou_static": 0.9558296307909113,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        },
+        "in_range_all_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 410001,
+          "tn": 11175323,
+          "n_moving_gt": 410001,
+          "n_static_gt": 11175323,
+          "iou_moving": 0.0,
+          "iou_static": 0.9646103121500961,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        }
+      },
+      "eval1": {
+        "all_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 48210,
+          "tn": 11914672,
+          "n_moving_gt": 48210,
+          "n_static_gt": 11914672,
+          "iou_moving": 0.0,
+          "iou_static": 0.9959700346454976,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        },
+        "interior_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 36222,
+          "tn": 9544324,
+          "n_moving_gt": 36222,
+          "n_static_gt": 9544324,
+          "iou_moving": 0.0,
+          "iou_static": 0.9962192133934746,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        },
+        "in_range_all_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 48210,
+          "tn": 11902829,
+          "n_moving_gt": 48210,
+          "n_static_gt": 11902829,
+          "iou_moving": 0.0,
+          "iou_static": 0.9959660411115719,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        }
+      },
+      "eval2": {
+        "all_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 328273,
+          "tn": 11691398,
+          "n_moving_gt": 328273,
+          "n_static_gt": 11691398,
+          "iou_moving": 0.0,
+          "iou_static": 0.9726886867369331,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        },
+        "interior_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 273290,
+          "tn": 9440634,
+          "n_moving_gt": 273290,
+          "n_static_gt": 9440634,
+          "iou_moving": 0.0,
+          "iou_static": 0.971866158310483,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        },
+        "in_range_all_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 328273,
+          "tn": 11575692,
+          "n_moving_gt": 328273,
+          "n_static_gt": 11575692,
+          "iou_moving": 0.0,
+          "iou_static": 0.9724232220104814,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        }
+      },
+      "heldout_pooled": {
+        "all_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 839336,
+          "tn": 34781593,
+          "n_moving_gt": 839336,
+          "n_static_gt": 34781593,
+          "iou_moving": 0.0,
+          "iou_static": 0.9764369985970888,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        },
+        "interior_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 719736,
+          "tn": 27862046,
+          "n_moving_gt": 719736,
+          "n_static_gt": 27862046,
+          "iou_moving": 0.0,
+          "iou_static": 0.97481836506905,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        },
+        "in_range_all_frames": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 786484,
+          "tn": 34653844,
+          "n_moving_gt": 786484,
+          "n_static_gt": 34653844,
+          "iou_moving": 0.0,
+          "iou_static": 0.9778082189307051,
+          "precision": NaN,
+          "recall": 0.0,
+          "f1": NaN,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 0.0
+        }
+      },
+      "heldout_macro_mean": {
+        "iou_moving": 0.0,
+        "iou_static": 0.9762963897806122,
+        "f1": NaN,
+        "static_fp_rate": 0.0,
+        "recall": 0.0
+      }
+    },
+    "temporal_detector": {
+      "development": {
+        "all_frames": {
+          "tp": 57298,
+          "fp": 9726,
+          "fn": 20112,
+          "tn": 12114615,
+          "n_moving_gt": 77410,
+          "n_static_gt": 12124341,
+          "iou_moving": 0.6575697759823724,
+          "iou_static": 0.9975430758388212,
+          "precision": 0.8548878013845786,
+          "recall": 0.7401886061232399,
+          "f1": 0.7934142930334963,
+          "static_fp_rate": 0.0008021879292243595,
+          "moving_removal_rate": 0.7401886061232399
+        },
+        "interior_frames": {
+          "tp": 33288,
+          "fp": 7524,
+          "fn": 8112,
+          "tn": 9703089,
+          "n_moving_gt": 41400,
+          "n_static_gt": 9710613,
+          "iou_moving": 0.6804022565611969,
+          "iou_static": 0.9983911469868733,
+          "precision": 0.8156424581005587,
+          "recall": 0.8040579710144927,
+          "f1": 0.8098087870383885,
+          "static_fp_rate": 0.000774822351585837,
+          "moving_removal_rate": 0.8040579710144927
+        },
+        "in_range_all_frames": {
+          "tp": 57298,
+          "fp": 9726,
+          "fn": 10724,
+          "tn": 12073971,
+          "n_moving_gt": 68022,
+          "n_static_gt": 12083697,
+          "iou_moving": 0.7369707259350723,
+          "iou_static": 0.9983091377421044,
+          "precision": 0.8548878013845786,
+          "recall": 0.8423451236364705,
+          "f1": 0.8485701168490736,
+          "static_fp_rate": 0.0008048861205308276,
+          "moving_removal_rate": 0.8423451236364705
+        }
+      },
+      "eval0": {
+        "all_frames": {
+          "tp": 114072,
+          "fp": 11395,
+          "fn": 348781,
+          "tn": 11164128,
+          "n_moving_gt": 462853,
+          "n_static_gt": 11175523,
+          "iou_moving": 0.24053237968320373,
+          "iou_static": 0.9687463989148498,
+          "precision": 0.9091793061123642,
+          "recall": 0.24645405776780102,
+          "f1": 0.38778895838999183,
+          "static_fp_rate": 0.0010196390808734411,
+          "moving_removal_rate": 0.24645405776780102
+        },
+        "interior_frames": {
+          "tp": 88290,
+          "fp": 8345,
+          "fn": 321934,
+          "tn": 8868743,
+          "n_moving_gt": 410224,
+          "n_static_gt": 8877088,
+          "iou_moving": 0.21093296445747295,
+          "iou_static": 0.964096291975386,
+          "precision": 0.9136441247995033,
+          "recall": 0.21522387768633722,
+          "f1": 0.3483809106674637,
+          "static_fp_rate": 0.0009400605243521299,
+          "moving_removal_rate": 0.21522387768633722
+        },
+        "in_range_all_frames": {
+          "tp": 114072,
+          "fp": 11395,
+          "fn": 295929,
+          "tn": 11163928,
+          "n_moving_gt": 410001,
+          "n_static_gt": 11175323,
+          "iou_moving": 0.2707002439510579,
+          "iou_static": 0.9732092015762535,
+          "precision": 0.9091793061123642,
+          "recall": 0.2782237116494838,
+          "f1": 0.4260646761337745,
+          "static_fp_rate": 0.0010196573289201574,
+          "moving_removal_rate": 0.2782237116494838
+        }
+      },
+      "eval1": {
+        "all_frames": {
+          "tp": 15239,
+          "fp": 5898,
+          "fn": 32971,
+          "tn": 11908774,
+          "n_moving_gt": 48210,
+          "n_static_gt": 11914672,
+          "iou_moving": 0.28164042285798774,
+          "iou_static": 0.996746722345152,
+          "precision": 0.7209632398164356,
+          "recall": 0.3160962455922008,
+          "f1": 0.4394999062684759,
+          "static_fp_rate": 0.0004950199216562571,
+          "moving_removal_rate": 0.3160962455922008
+        },
+        "interior_frames": {
+          "tp": 12499,
+          "fp": 5158,
+          "fn": 23723,
+          "tn": 9539166,
+          "n_moving_gt": 36222,
+          "n_static_gt": 9544324,
+          "iou_moving": 0.30205413243112617,
+          "iou_static": 0.9969815156635413,
+          "precision": 0.7078778954522286,
+          "recall": 0.34506653415051625,
+          "f1": 0.46396555244158205,
+          "static_fp_rate": 0.000540425911777513,
+          "moving_removal_rate": 0.34506653415051625
+        },
+        "in_range_all_frames": {
+          "tp": 15239,
+          "fp": 5898,
+          "fn": 32971,
+          "tn": 11896931,
+          "n_moving_gt": 48210,
+          "n_static_gt": 11902829,
+          "iou_moving": 0.28164042285798774,
+          "iou_static": 0.9967434943615007,
+          "precision": 0.7209632398164356,
+          "recall": 0.3160962455922008,
+          "f1": 0.4394999062684759,
+          "static_fp_rate": 0.0004955124533839812,
+          "moving_removal_rate": 0.3160962455922008
+        }
+      },
+      "eval2": {
+        "all_frames": {
+          "tp": 303515,
+          "fp": 3195,
+          "fn": 24758,
+          "tn": 11688203,
+          "n_moving_gt": 328273,
+          "n_static_gt": 11691398,
+          "iou_moving": 0.9156690841951561,
+          "iou_static": 0.9976141492141279,
+          "precision": 0.9895829937074109,
+          "recall": 0.9245810651500428,
+          "f1": 0.9559783490266669,
+          "static_fp_rate": 0.00027327784068252576,
+          "moving_removal_rate": 0.9245810651500428
+        },
+        "interior_frames": {
+          "tp": 255007,
+          "fp": 2297,
+          "fn": 18283,
+          "tn": 9438337,
+          "n_moving_gt": 273290,
+          "n_static_gt": 9440634,
+          "iou_moving": 0.9253230377340005,
+          "iou_static": 0.9978242752315091,
+          "precision": 0.9910728165904922,
+          "recall": 0.9331003695707856,
+          "f1": 0.9612132817182253,
+          "static_fp_rate": 0.00024330993024409165,
+          "moving_removal_rate": 0.9331003695707856
+        },
+        "in_range_all_frames": {
+          "tp": 303515,
+          "fp": 3195,
+          "fn": 24758,
+          "tn": 11572497,
+          "n_moving_gt": 328273,
+          "n_static_gt": 11575692,
+          "iou_moving": 0.9156690841951561,
+          "iou_static": 0.99759035209841,
+          "precision": 0.9895829937074109,
+          "recall": 0.9245810651500428,
+          "f1": 0.9559783490266669,
+          "static_fp_rate": 0.0002760094169748124,
+          "moving_removal_rate": 0.9245810651500428
+        }
+      },
+      "heldout_pooled": {
+        "all_frames": {
+          "tp": 432826,
+          "fp": 20488,
+          "fn": 406510,
+          "tn": 34761105,
+          "n_moving_gt": 839336,
+          "n_static_gt": 34781593,
+          "iou_moving": 0.5033890656692532,
+          "iou_static": 0.9878652736693422,
+          "precision": 0.9548039548745462,
+          "recall": 0.5156766777547966,
+          "f1": 0.6696723784473755,
+          "static_fp_rate": 0.0005890472009145757,
+          "moving_removal_rate": 0.5156766777547966
+        },
+        "interior_frames": {
+          "tp": 355796,
+          "fp": 15800,
+          "fn": 363940,
+          "tn": 27846246,
+          "n_moving_gt": 719736,
+          "n_static_gt": 27862046,
+          "iou_moving": 0.4837234343390398,
+          "iou_static": 0.9865464398657322,
+          "precision": 0.9574807048515054,
+          "recall": 0.49434236998010384,
+          "f1": 0.652039892534994,
+          "static_fp_rate": 0.0005670796753404255,
+          "moving_removal_rate": 0.49434236998010384
+        },
+        "in_range_all_frames": {
+          "tp": 432826,
+          "fp": 20488,
+          "fn": 353658,
+          "tn": 34633356,
+          "n_moving_gt": 786484,
+          "n_static_gt": 34653844,
+          "iou_moving": 0.5363581388201821,
+          "iou_static": 0.9893124050953421,
+          "precision": 0.9548039548745462,
+          "recall": 0.5503303309412525,
+          "f1": 0.6982201939348185,
+          "static_fp_rate": 0.0005912186826950569,
+          "moving_removal_rate": 0.5503303309412525
+        }
+      },
+      "heldout_macro_mean": {
+        "iou_moving": 0.47928062891211587,
+        "iou_static": 0.9877024234913767,
+        "f1": 0.5944224045617116,
+        "static_fp_rate": 0.000595978947737408,
+        "recall": 0.4957104561700148
+      }
+    },
+    "votes_only": {
+      "development": {
+        "all_frames": {
+          "tp": 58901,
+          "fp": 15742,
+          "fn": 18509,
+          "tn": 12108599,
+          "n_moving_gt": 77410,
+          "n_static_gt": 12124341,
+          "iou_moving": 0.6323106320851941,
+          "iou_static": 0.9971793277525457,
+          "precision": 0.7891027959755101,
+          "recall": 0.7608965249967704,
+          "f1": 0.7747430172374107,
+          "static_fp_rate": 0.0012983798459644117,
+          "moving_removal_rate": 0.7608965249967704
+        },
+        "interior_frames": {
+          "tp": 34560,
+          "fp": 12489,
+          "fn": 6840,
+          "tn": 9698124,
+          "n_moving_gt": 41400,
+          "n_static_gt": 9710613,
+          "iou_moving": 0.6413182653231643,
+          "iou_static": 0.9980108985348322,
+          "precision": 0.7345533380093094,
+          "recall": 0.8347826086956521,
+          "f1": 0.7814672862327442,
+          "static_fp_rate": 0.001286118600339649,
+          "moving_removal_rate": 0.8347826086956521
+        },
+        "in_range_all_frames": {
+          "tp": 58901,
+          "fp": 15742,
+          "fn": 9121,
+          "tn": 12067955,
+          "n_moving_gt": 68022,
+          "n_static_gt": 12083697,
+          "iou_moving": 0.7031779762189008,
+          "iou_static": 0.9979439862569668,
+          "precision": 0.7891027959755101,
+          "recall": 0.865911028784805,
+          "f1": 0.825724599586444,
+          "static_fp_rate": 0.0013027469987041218,
+          "moving_removal_rate": 0.865911028784805
+        }
+      },
+      "eval0": {
+        "all_frames": {
+          "tp": 114931,
+          "fp": 20257,
+          "fn": 347922,
+          "tn": 11155266,
+          "n_moving_gt": 462853,
+          "n_static_gt": 11175523,
+          "iou_moving": 0.23789820123781333,
+          "iou_static": 0.9680495719812955,
+          "precision": 0.8501568186525431,
+          "recall": 0.2483099385766107,
+          "f1": 0.38435826306223153,
+          "static_fp_rate": 0.001812622102786599,
+          "moving_removal_rate": 0.2483099385766107
+        },
+        "interior_frames": {
+          "tp": 89083,
+          "fp": 14832,
+          "fn": 321141,
+          "tn": 8862256,
+          "n_moving_gt": 410224,
+          "n_static_gt": 8877088,
+          "iou_moving": 0.2095794436497779,
+          "iou_static": 0.9634741644288265,
+          "precision": 0.857267959389886,
+          "recall": 0.21715696790046413,
+          "f1": 0.34653274698087483,
+          "static_fp_rate": 0.0016708181782133962,
+          "moving_removal_rate": 0.21715696790046413
+        },
+        "in_range_all_frames": {
+          "tp": 114931,
+          "fp": 20257,
+          "fn": 295070,
+          "tn": 11155066,
+          "n_moving_gt": 410001,
+          "n_static_gt": 11175323,
+          "iou_moving": 0.2671211226752321,
+          "iou_static": 0.972509485943507,
+          "precision": 0.8501568186525431,
+          "recall": 0.2803188284906622,
+          "f1": 0.4216189248132299,
+          "static_fp_rate": 0.0018126545425129995,
+          "moving_removal_rate": 0.2803188284906622
+        }
+      },
+      "eval1": {
+        "all_frames": {
+          "tp": 16474,
+          "fp": 11614,
+          "fn": 31736,
+          "tn": 11903058,
+          "n_moving_gt": 48210,
+          "n_static_gt": 11914672,
+          "iou_moving": 0.27537443166622094,
+          "iou_static": 0.9963712941998968,
+          "precision": 0.5865138137282826,
+          "recall": 0.34171333748185023,
+          "f1": 0.43183307557209893,
+          "static_fp_rate": 0.0009747645591922296,
+          "moving_removal_rate": 0.34171333748185023
+        },
+        "interior_frames": {
+          "tp": 13478,
+          "fp": 9147,
+          "fn": 22744,
+          "tn": 9535177,
+          "n_moving_gt": 36222,
+          "n_static_gt": 9544324,
+          "iou_moving": 0.29707509532940996,
+          "iou_static": 0.9966665858338207,
+          "precision": 0.5957127071823204,
+          "recall": 0.3720943073270388,
+          "f1": 0.4580692303770796,
+          "static_fp_rate": 0.0009583706504515144,
+          "moving_removal_rate": 0.3720943073270388
+        },
+        "in_range_all_frames": {
+          "tp": 16474,
+          "fp": 11614,
+          "fn": 31736,
+          "tn": 11891215,
+          "n_moving_gt": 48210,
+          "n_static_gt": 11902829,
+          "iou_moving": 0.27537443166622094,
+          "iou_static": 0.996367693334445,
+          "precision": 0.5865138137282826,
+          "recall": 0.34171333748185023,
+          "f1": 0.43183307557209893,
+          "static_fp_rate": 0.0009757344241440417,
+          "moving_removal_rate": 0.34171333748185023
+        }
+      },
+      "eval2": {
+        "all_frames": {
+          "tp": 304297,
+          "fp": 5073,
+          "fn": 23976,
+          "tn": 11686325,
+          "n_moving_gt": 328273,
+          "n_static_gt": 11691398,
+          "iou_moving": 0.9128563114601645,
+          "iou_static": 0.997520437674461,
+          "precision": 0.9836021592268158,
+          "recall": 0.9269632287760492,
+          "f1": 0.9544431602009275,
+          "static_fp_rate": 0.00043390875924333427,
+          "moving_removal_rate": 0.9269632287760492
+        },
+        "interior_frames": {
+          "tp": 255602,
+          "fp": 3722,
+          "fn": 17688,
+          "tn": 9436912,
+          "n_moving_gt": 273290,
+          "n_static_gt": 9440634,
+          "iou_moving": 0.9227109294904192,
+          "iou_static": 0.9977363849528489,
+          "precision": 0.9856472983603523,
+          "recall": 0.9352775440008781,
+          "f1": 0.959802032991998,
+          "static_fp_rate": 0.00039425318257227214,
+          "moving_removal_rate": 0.9352775440008781
+        },
+        "in_range_all_frames": {
+          "tp": 304297,
+          "fp": 5073,
+          "fn": 23976,
+          "tn": 11570619,
+          "n_moving_gt": 328273,
+          "n_static_gt": 11575692,
+          "iou_moving": 0.9128563114601645,
+          "iou_static": 0.9974957041873957,
+          "precision": 0.9836021592268158,
+          "recall": 0.9269632287760492,
+          "f1": 0.9544431602009275,
+          "static_fp_rate": 0.00043824593812620446,
+          "moving_removal_rate": 0.9269632287760492
+        }
+      },
+      "heldout_pooled": {
+        "all_frames": {
+          "tp": 435702,
+          "fp": 36944,
+          "fn": 403634,
+          "tn": 34744649,
+          "n_moving_gt": 839336,
+          "n_static_gt": 34781593,
+          "iou_moving": 0.49721778426986807,
+          "iou_static": 0.9874783243547072,
+          "precision": 0.9218357925381787,
+          "recall": 0.5191031958595842,
+          "f1": 0.6641889903977342,
+          "static_fp_rate": 0.001062171016721402,
+          "moving_removal_rate": 0.5191031958595842
+        },
+        "interior_frames": {
+          "tp": 358163,
+          "fp": 27701,
+          "fn": 361573,
+          "tn": 27834345,
+          "n_moving_gt": 719736,
+          "n_static_gt": 27862046,
+          "iou_moving": 0.47918821251824567,
+          "iou_static": 0.9862075093913364,
+          "precision": 0.928210457570543,
+          "recall": 0.4976310758389187,
+          "f1": 0.647907018813314,
+          "static_fp_rate": 0.0009942198788990585,
+          "moving_removal_rate": 0.4976310758389187
+        },
+        "in_range_all_frames": {
+          "tp": 435702,
+          "fp": 36944,
+          "fn": 350782,
+          "tn": 34616900,
+          "n_moving_gt": 786484,
+          "n_static_gt": 34653844,
+          "iou_moving": 0.5291318730963728,
+          "iou_static": 0.9889235782721975,
+          "precision": 0.9218357925381787,
+          "recall": 0.5539871122616608,
+          "f1": 0.6920683328965238,
+          "static_fp_rate": 0.001066086636737904,
+          "moving_removal_rate": 0.5539871122616608
+        }
+      },
+      "heldout_macro_mean": {
+        "iou_moving": 0.47537631478806625,
+        "iou_static": 0.9873137679518843,
+        "f1": 0.5902114996117526,
+        "static_fp_rate": 0.0010737651404073877,
+        "recall": 0.50566216827817
+      }
+    },
+    "oracle_labels": {
+      "development": {
+        "all_frames": {
+          "tp": 77410,
+          "fp": 0,
+          "fn": 0,
+          "tn": 12124341,
+          "n_moving_gt": 77410,
+          "n_static_gt": 12124341,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        },
+        "interior_frames": {
+          "tp": 41400,
+          "fp": 0,
+          "fn": 0,
+          "tn": 9710613,
+          "n_moving_gt": 41400,
+          "n_static_gt": 9710613,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        },
+        "in_range_all_frames": {
+          "tp": 68022,
+          "fp": 0,
+          "fn": 0,
+          "tn": 12083697,
+          "n_moving_gt": 68022,
+          "n_static_gt": 12083697,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        }
+      },
+      "eval0": {
+        "all_frames": {
+          "tp": 462853,
+          "fp": 0,
+          "fn": 0,
+          "tn": 11175523,
+          "n_moving_gt": 462853,
+          "n_static_gt": 11175523,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        },
+        "interior_frames": {
+          "tp": 410224,
+          "fp": 0,
+          "fn": 0,
+          "tn": 8877088,
+          "n_moving_gt": 410224,
+          "n_static_gt": 8877088,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        },
+        "in_range_all_frames": {
+          "tp": 410001,
+          "fp": 0,
+          "fn": 0,
+          "tn": 11175323,
+          "n_moving_gt": 410001,
+          "n_static_gt": 11175323,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        }
+      },
+      "eval1": {
+        "all_frames": {
+          "tp": 48210,
+          "fp": 0,
+          "fn": 0,
+          "tn": 11914672,
+          "n_moving_gt": 48210,
+          "n_static_gt": 11914672,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        },
+        "interior_frames": {
+          "tp": 36222,
+          "fp": 0,
+          "fn": 0,
+          "tn": 9544324,
+          "n_moving_gt": 36222,
+          "n_static_gt": 9544324,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        },
+        "in_range_all_frames": {
+          "tp": 48210,
+          "fp": 0,
+          "fn": 0,
+          "tn": 11902829,
+          "n_moving_gt": 48210,
+          "n_static_gt": 11902829,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        }
+      },
+      "eval2": {
+        "all_frames": {
+          "tp": 328273,
+          "fp": 0,
+          "fn": 0,
+          "tn": 11691398,
+          "n_moving_gt": 328273,
+          "n_static_gt": 11691398,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        },
+        "interior_frames": {
+          "tp": 273290,
+          "fp": 0,
+          "fn": 0,
+          "tn": 9440634,
+          "n_moving_gt": 273290,
+          "n_static_gt": 9440634,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        },
+        "in_range_all_frames": {
+          "tp": 328273,
+          "fp": 0,
+          "fn": 0,
+          "tn": 11575692,
+          "n_moving_gt": 328273,
+          "n_static_gt": 11575692,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        }
+      },
+      "heldout_pooled": {
+        "all_frames": {
+          "tp": 839336,
+          "fp": 0,
+          "fn": 0,
+          "tn": 34781593,
+          "n_moving_gt": 839336,
+          "n_static_gt": 34781593,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        },
+        "interior_frames": {
+          "tp": 719736,
+          "fp": 0,
+          "fn": 0,
+          "tn": 27862046,
+          "n_moving_gt": 719736,
+          "n_static_gt": 27862046,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        },
+        "in_range_all_frames": {
+          "tp": 786484,
+          "fp": 0,
+          "fn": 0,
+          "tn": 34653844,
+          "n_moving_gt": 786484,
+          "n_static_gt": 34653844,
+          "iou_moving": 1.0,
+          "iou_static": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "static_fp_rate": 0.0,
+          "moving_removal_rate": 1.0
+        }
+      },
+      "heldout_macro_mean": {
+        "iou_moving": 1.0,
+        "iou_static": 1.0,
+        "f1": 1.0,
+        "static_fp_rate": 0.0,
+        "recall": 1.0
+      }
+    }
+  },
+  "objects": {
+    "temporal_detector": {
+      "development": {
+        "moving_all": {
+          "object_frames": 290,
+          "object_frames_detected": 199,
+          "object_frame_coverage": 0.6862068965517242,
+          "mean_point_recall": 0.5962160723044115,
+          "instances": 8,
+          "instances_detected_in_majority_of_frames": 5
+        },
+        "moving_by_class": {
+          "moving-car": {
+            "object_frames": 180,
+            "object_frames_detected": 175,
+            "object_frame_coverage": 0.9722222222222222,
+            "mean_point_recall": 0.8285580483909936,
+            "instances": 5,
+            "instances_detected_in_majority_of_frames": 5
+          },
+          "moving-person": {
+            "object_frames": 110,
+            "object_frames_detected": 24,
+            "object_frame_coverage": 0.21818181818181817,
+            "mean_point_recall": 0.21602011143545916,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 0
+          }
+        },
+        "moving_by_speed": {
+          "slow <1.5 m/s": {
+            "object_frames": 110,
+            "object_frames_detected": 24,
+            "object_frame_coverage": 0.21818181818181817,
+            "mean_point_recall": 0.21602011143545916,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "1.5-5 m/s": {
+            "object_frames": 0
+          },
+          "fast >=5 m/s": {
+            "object_frames": 180,
+            "object_frames_detected": 175,
+            "object_frame_coverage": 0.9722222222222222,
+            "mean_point_recall": 0.8285580483909936,
+            "instances": 5,
+            "instances_detected_in_majority_of_frames": 5
+          }
+        },
+        "moving_unknown_speed_object_frames": 0,
+        "parked_vehicles": {
+          "object_frames": 584,
+          "instances": 21,
+          "mean_flagged_fraction": 0.0016890561489121309,
+          "object_frames_falsely_removed_ge50pct": 0,
+          "object_frames_touched_ge10pct": 1,
+          "object_frames_untouched": 538
+        }
+      },
+      "eval0": {
+        "moving_all": {
+          "object_frames": 689,
+          "object_frames_detected": 227,
+          "object_frame_coverage": 0.32946298984034833,
+          "mean_point_recall": 0.27959833274658774,
+          "instances": 11,
+          "instances_detected_in_majority_of_frames": 4
+        },
+        "moving_by_class": {
+          "moving-bicyclist": {
+            "object_frames": 97,
+            "object_frames_detected": 81,
+            "object_frame_coverage": 0.8350515463917526,
+            "mean_point_recall": 0.7468256514817858,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 2
+          },
+          "moving-car": {
+            "object_frames": 306,
+            "object_frames_detected": 100,
+            "object_frame_coverage": 0.32679738562091504,
+            "mean_point_recall": 0.2687336078606638,
+            "instances": 4,
+            "instances_detected_in_majority_of_frames": 2
+          },
+          "moving-person": {
+            "object_frames": 286,
+            "object_frames_detected": 46,
+            "object_frame_coverage": 0.16083916083916083,
+            "mean_point_recall": 0.13275761910245668,
+            "instances": 4,
+            "instances_detected_in_majority_of_frames": 0
+          }
+        },
+        "moving_by_speed": {
+          "slow <1.5 m/s": {
+            "object_frames": 480,
+            "object_frames_detected": 46,
+            "object_frame_coverage": 0.09583333333333334,
+            "mean_point_recall": 0.08149108756858096,
+            "instances": 6,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "1.5-5 m/s": {
+            "object_frames": 25,
+            "object_frames_detected": 25,
+            "object_frame_coverage": 1.0,
+            "mean_point_recall": 0.9233273449360702,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 1
+          },
+          "fast >=5 m/s": {
+            "object_frames": 184,
+            "object_frames_detected": 156,
+            "object_frame_coverage": 0.8478260869565217,
+            "mean_point_recall": 0.7089366609025995,
+            "instances": 4,
+            "instances_detected_in_majority_of_frames": 3
+          }
+        },
+        "moving_unknown_speed_object_frames": 0,
+        "parked_vehicles": {
+          "object_frames": 562,
+          "instances": 10,
+          "mean_flagged_fraction": 0.004405174648379731,
+          "object_frames_falsely_removed_ge50pct": 1,
+          "object_frames_touched_ge10pct": 7,
+          "object_frames_untouched": 552
+        }
+      },
+      "eval1": {
+        "moving_all": {
+          "object_frames": 602,
+          "object_frames_detected": 135,
+          "object_frame_coverage": 0.22425249169435216,
+          "mean_point_recall": 0.21833995021691419,
+          "instances": 12,
+          "instances_detected_in_majority_of_frames": 2
+        },
+        "moving_by_class": {
+          "moving-bicyclist": {
+            "object_frames": 63,
+            "object_frames_detected": 16,
+            "object_frame_coverage": 0.25396825396825395,
+            "mean_point_recall": 0.23186557590922086,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 1
+          },
+          "moving-car": {
+            "object_frames": 100,
+            "object_frames_detected": 61,
+            "object_frame_coverage": 0.61,
+            "mean_point_recall": 0.4946841640705816,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 1
+          },
+          "moving-other-vehicle": {
+            "object_frames": 37,
+            "object_frames_detected": 1,
+            "object_frame_coverage": 0.02702702702702703,
+            "mean_point_recall": 0.05428899178899179,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "moving-person": {
+            "object_frames": 402,
+            "object_frames_detected": 57,
+            "object_frame_coverage": 0.1417910447761194,
+            "mean_point_recall": 0.16257713842052376,
+            "instances": 7,
+            "instances_detected_in_majority_of_frames": 0
+          }
+        },
+        "moving_by_speed": {
+          "slow <1.5 m/s": {
+            "object_frames": 392,
+            "object_frames_detected": 58,
+            "object_frame_coverage": 0.14795918367346939,
+            "mean_point_recall": 0.16541729093160618,
+            "instances": 6,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "1.5-5 m/s": {
+            "object_frames": 82,
+            "object_frames_detected": 2,
+            "object_frame_coverage": 0.024390243902439025,
+            "mean_point_recall": 0.06165104279486392,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "fast >=5 m/s": {
+            "object_frames": 128,
+            "object_frames_detected": 75,
+            "object_frame_coverage": 0.5859375,
+            "mean_point_recall": 0.48079442559542074,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 2
+          }
+        },
+        "moving_unknown_speed_object_frames": 0,
+        "parked_vehicles": {
+          "object_frames": 1469,
+          "instances": 29,
+          "mean_flagged_fraction": 0.0007810160823453355,
+          "object_frames_falsely_removed_ge50pct": 1,
+          "object_frames_touched_ge10pct": 1,
+          "object_frames_untouched": 1428
+        }
+      },
+      "eval2": {
+        "moving_all": {
+          "object_frames": 291,
+          "object_frames_detected": 204,
+          "object_frame_coverage": 0.7010309278350515,
+          "mean_point_recall": 0.6389987596594779,
+          "instances": 9,
+          "instances_detected_in_majority_of_frames": 6
+        },
+        "moving_by_class": {
+          "moving-car": {
+            "object_frames": 199,
+            "object_frames_detected": 151,
+            "object_frame_coverage": 0.7587939698492462,
+            "mean_point_recall": 0.6986955227614884,
+            "instances": 6,
+            "instances_detected_in_majority_of_frames": 5
+          },
+          "moving-person": {
+            "object_frames": 32,
+            "object_frames_detected": 1,
+            "object_frame_coverage": 0.03125,
+            "mean_point_recall": 0.09939886928163344,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "moving-truck": {
+            "object_frames": 60,
+            "object_frames_detected": 52,
+            "object_frame_coverage": 0.8666666666666667,
+            "mean_point_recall": 0.7287911035726597,
+            "instances": 2,
+            "instances_detected_in_majority_of_frames": 1
+          }
+        },
+        "moving_by_speed": {
+          "slow <1.5 m/s": {
+            "object_frames": 32,
+            "object_frames_detected": 1,
+            "object_frame_coverage": 0.03125,
+            "mean_point_recall": 0.09939886928163344,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "1.5-5 m/s": {
+            "object_frames": 0
+          },
+          "fast >=5 m/s": {
+            "object_frames": 257,
+            "object_frames_detected": 203,
+            "object_frame_coverage": 0.7898832684824902,
+            "mean_point_recall": 0.7101267280990148,
+            "instances": 7,
+            "instances_detected_in_majority_of_frames": 6
+          }
+        },
+        "moving_unknown_speed_object_frames": 2,
+        "parked_vehicles": {
+          "object_frames": 2410,
+          "instances": 42,
+          "mean_flagged_fraction": 0.00023088980436856144,
+          "object_frames_falsely_removed_ge50pct": 0,
+          "object_frames_touched_ge10pct": 0,
+          "object_frames_untouched": 2349
+        }
+      },
+      "heldout_pooled": {
+        "moving_all": {
+          "object_frames": 1582,
+          "object_frames_detected": 566,
+          "object_frame_coverage": 0.3577749683944374,
+          "instances": 32,
+          "instances_detected_in_majority_of_frames": 12
+        },
+        "moving_by_class": {
+          "moving-bicyclist": {
+            "object_frames": 160,
+            "object_frames_detected": 97,
+            "object_frame_coverage": 0.60625,
+            "instances": 6,
+            "instances_detected_in_majority_of_frames": 3
+          },
+          "moving-car": {
+            "object_frames": 605,
+            "object_frames_detected": 312,
+            "object_frame_coverage": 0.515702479338843,
+            "instances": 11,
+            "instances_detected_in_majority_of_frames": 8
+          },
+          "moving-other-vehicle": {
+            "object_frames": 37,
+            "object_frames_detected": 1,
+            "object_frame_coverage": 0.02702702702702703,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "moving-person": {
+            "object_frames": 720,
+            "object_frames_detected": 104,
+            "object_frame_coverage": 0.14444444444444443,
+            "instances": 12,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "moving-truck": {
+            "object_frames": 60,
+            "object_frames_detected": 52,
+            "object_frame_coverage": 0.8666666666666667,
+            "instances": 2,
+            "instances_detected_in_majority_of_frames": 1
+          }
+        },
+        "moving_by_speed": {
+          "slow <1.5 m/s": {
+            "object_frames": 904,
+            "object_frames_detected": 105,
+            "object_frame_coverage": 0.1161504424778761,
+            "instances": 13,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "1.5-5 m/s": {
+            "object_frames": 107,
+            "object_frames_detected": 27,
+            "object_frame_coverage": 0.2523364485981308,
+            "instances": 4,
+            "instances_detected_in_majority_of_frames": 1
+          },
+          "fast >=5 m/s": {
+            "object_frames": 569,
+            "object_frames_detected": 434,
+            "object_frame_coverage": 0.7627416520210897,
+            "instances": 14,
+            "instances_detected_in_majority_of_frames": 11
+          }
+        },
+        "parked_vehicles": {
+          "object_frames": 4441,
+          "instances": 81,
+          "object_frames_falsely_removed_ge50pct": 2,
+          "object_frames_touched_ge10pct": 8,
+          "object_frames_untouched": 4329
+        }
+      }
+    },
+    "votes_only": {
+      "development": {
+        "moving_all": {
+          "object_frames": 290,
+          "object_frames_detected": 204,
+          "object_frame_coverage": 0.7034482758620689,
+          "mean_point_recall": 0.6598655262985524,
+          "instances": 8,
+          "instances_detected_in_majority_of_frames": 5
+        },
+        "moving_by_class": {
+          "moving-car": {
+            "object_frames": 180,
+            "object_frames_detected": 177,
+            "object_frame_coverage": 0.9833333333333333,
+            "mean_point_recall": 0.9000967969230829,
+            "instances": 5,
+            "instances_detected_in_majority_of_frames": 5
+          },
+          "moving-person": {
+            "object_frames": 110,
+            "object_frames_detected": 27,
+            "object_frame_coverage": 0.24545454545454545,
+            "mean_point_recall": 0.26675981073113914,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 0
+          }
+        },
+        "moving_by_speed": {
+          "slow <1.5 m/s": {
+            "object_frames": 110,
+            "object_frames_detected": 27,
+            "object_frame_coverage": 0.24545454545454545,
+            "mean_point_recall": 0.26675981073113914,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "1.5-5 m/s": {
+            "object_frames": 0
+          },
+          "fast >=5 m/s": {
+            "object_frames": 180,
+            "object_frames_detected": 177,
+            "object_frame_coverage": 0.9833333333333333,
+            "mean_point_recall": 0.9000967969230829,
+            "instances": 5,
+            "instances_detected_in_majority_of_frames": 5
+          }
+        },
+        "moving_unknown_speed_object_frames": 0,
+        "parked_vehicles": {
+          "object_frames": 584,
+          "instances": 21,
+          "mean_flagged_fraction": 0.00523453082624928,
+          "object_frames_falsely_removed_ge50pct": 0,
+          "object_frames_touched_ge10pct": 5,
+          "object_frames_untouched": 432
+        }
+      },
+      "eval0": {
+        "moving_all": {
+          "object_frames": 689,
+          "object_frames_detected": 229,
+          "object_frame_coverage": 0.33236574746008707,
+          "mean_point_recall": 0.2916550358911635,
+          "instances": 11,
+          "instances_detected_in_majority_of_frames": 4
+        },
+        "moving_by_class": {
+          "moving-bicyclist": {
+            "object_frames": 97,
+            "object_frames_detected": 82,
+            "object_frame_coverage": 0.845360824742268,
+            "mean_point_recall": 0.7650736051316109,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 2
+          },
+          "moving-car": {
+            "object_frames": 306,
+            "object_frames_detected": 100,
+            "object_frame_coverage": 0.32679738562091504,
+            "mean_point_recall": 0.27873025114859107,
+            "instances": 4,
+            "instances_detected_in_majority_of_frames": 2
+          },
+          "moving-person": {
+            "object_frames": 286,
+            "object_frames_detected": 47,
+            "object_frame_coverage": 0.16433566433566432,
+            "mean_point_recall": 0.14491861251670107,
+            "instances": 4,
+            "instances_detected_in_majority_of_frames": 0
+          }
+        },
+        "moving_by_speed": {
+          "slow <1.5 m/s": {
+            "object_frames": 480,
+            "object_frames_detected": 47,
+            "object_frame_coverage": 0.09791666666666667,
+            "mean_point_recall": 0.0893915508093567,
+            "instances": 6,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "1.5-5 m/s": {
+            "object_frames": 25,
+            "object_frames_detected": 25,
+            "object_frame_coverage": 1.0,
+            "mean_point_recall": 0.9233273449360702,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 1
+          },
+          "fast >=5 m/s": {
+            "object_frames": 184,
+            "object_frames_detected": 157,
+            "object_frame_coverage": 0.8532608695652174,
+            "mean_point_recall": 0.7334738680278189,
+            "instances": 4,
+            "instances_detected_in_majority_of_frames": 3
+          }
+        },
+        "moving_unknown_speed_object_frames": 0,
+        "parked_vehicles": {
+          "object_frames": 562,
+          "instances": 10,
+          "mean_flagged_fraction": 0.023889774944788347,
+          "object_frames_falsely_removed_ge50pct": 4,
+          "object_frames_touched_ge10pct": 39,
+          "object_frames_untouched": 398
+        }
+      },
+      "eval1": {
+        "moving_all": {
+          "object_frames": 602,
+          "object_frames_detected": 168,
+          "object_frame_coverage": 0.27906976744186046,
+          "mean_point_recall": 0.27545857121336936,
+          "instances": 12,
+          "instances_detected_in_majority_of_frames": 2
+        },
+        "moving_by_class": {
+          "moving-bicyclist": {
+            "object_frames": 63,
+            "object_frames_detected": 19,
+            "object_frame_coverage": 0.30158730158730157,
+            "mean_point_recall": 0.29645953504571915,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 1
+          },
+          "moving-car": {
+            "object_frames": 100,
+            "object_frames_detected": 86,
+            "object_frame_coverage": 0.86,
+            "mean_point_recall": 0.685666080912762,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 1
+          },
+          "moving-other-vehicle": {
+            "object_frames": 37,
+            "object_frames_detected": 3,
+            "object_frame_coverage": 0.08108108108108109,
+            "mean_point_recall": 0.11308998224443119,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "moving-person": {
+            "object_frames": 402,
+            "object_frames_detected": 60,
+            "object_frame_coverage": 0.14925373134328357,
+            "mean_point_recall": 0.18507007892598973,
+            "instances": 7,
+            "instances_detected_in_majority_of_frames": 0
+          }
+        },
+        "moving_by_speed": {
+          "slow <1.5 m/s": {
+            "object_frames": 392,
+            "object_frames_detected": 62,
+            "object_frame_coverage": 0.15816326530612246,
+            "mean_point_recall": 0.19253560260967034,
+            "instances": 6,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "1.5-5 m/s": {
+            "object_frames": 82,
+            "object_frames_detected": 3,
+            "object_frame_coverage": 0.036585365853658534,
+            "mean_point_recall": 0.08844587343267592,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "fast >=5 m/s": {
+            "object_frames": 128,
+            "object_frames_detected": 103,
+            "object_frame_coverage": 0.8046875,
+            "mean_point_recall": 0.6492151720779542,
+            "instances": 3,
+            "instances_detected_in_majority_of_frames": 2
+          }
+        },
+        "moving_unknown_speed_object_frames": 0,
+        "parked_vehicles": {
+          "object_frames": 1469,
+          "instances": 29,
+          "mean_flagged_fraction": 0.006967968778135832,
+          "object_frames_falsely_removed_ge50pct": 3,
+          "object_frames_touched_ge10pct": 32,
+          "object_frames_untouched": 1229
+        }
+      },
+      "eval2": {
+        "moving_all": {
+          "object_frames": 291,
+          "object_frames_detected": 210,
+          "object_frame_coverage": 0.7216494845360825,
+          "mean_point_recall": 0.6574818148279561,
+          "instances": 9,
+          "instances_detected_in_majority_of_frames": 7
+        },
+        "moving_by_class": {
+          "moving-car": {
+            "object_frames": 199,
+            "object_frames_detected": 156,
+            "object_frame_coverage": 0.7839195979899497,
+            "mean_point_recall": 0.7186060902175698,
+            "instances": 6,
+            "instances_detected_in_majority_of_frames": 5
+          },
+          "moving-person": {
+            "object_frames": 32,
+            "object_frames_detected": 1,
+            "object_frame_coverage": 0.03125,
+            "mean_point_recall": 0.11915023840736765,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "moving-truck": {
+            "object_frames": 60,
+            "object_frames_detected": 53,
+            "object_frame_coverage": 0.8833333333333333,
+            "mean_point_recall": 0.7418631422100513,
+            "instances": 2,
+            "instances_detected_in_majority_of_frames": 2
+          }
+        },
+        "moving_by_speed": {
+          "slow <1.5 m/s": {
+            "object_frames": 32,
+            "object_frames_detected": 1,
+            "object_frame_coverage": 0.03125,
+            "mean_point_recall": 0.11915023840736765,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "1.5-5 m/s": {
+            "object_frames": 0
+          },
+          "fast >=5 m/s": {
+            "object_frames": 257,
+            "object_frames_detected": 208,
+            "object_frame_coverage": 0.8093385214007782,
+            "mean_point_recall": 0.7265005168287506,
+            "instances": 7,
+            "instances_detected_in_majority_of_frames": 6
+          }
+        },
+        "moving_unknown_speed_object_frames": 2,
+        "parked_vehicles": {
+          "object_frames": 2410,
+          "instances": 42,
+          "mean_flagged_fraction": 0.002951561926899866,
+          "object_frames_falsely_removed_ge50pct": 0,
+          "object_frames_touched_ge10pct": 22,
+          "object_frames_untouched": 2147
+        }
+      },
+      "heldout_pooled": {
+        "moving_all": {
+          "object_frames": 1582,
+          "object_frames_detected": 607,
+          "object_frame_coverage": 0.3836915297092288,
+          "instances": 32,
+          "instances_detected_in_majority_of_frames": 13
+        },
+        "moving_by_class": {
+          "moving-bicyclist": {
+            "object_frames": 160,
+            "object_frames_detected": 101,
+            "object_frame_coverage": 0.63125,
+            "instances": 6,
+            "instances_detected_in_majority_of_frames": 3
+          },
+          "moving-car": {
+            "object_frames": 605,
+            "object_frames_detected": 342,
+            "object_frame_coverage": 0.5652892561983471,
+            "instances": 11,
+            "instances_detected_in_majority_of_frames": 8
+          },
+          "moving-other-vehicle": {
+            "object_frames": 37,
+            "object_frames_detected": 3,
+            "object_frame_coverage": 0.08108108108108109,
+            "instances": 1,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "moving-person": {
+            "object_frames": 720,
+            "object_frames_detected": 108,
+            "object_frame_coverage": 0.15,
+            "instances": 12,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "moving-truck": {
+            "object_frames": 60,
+            "object_frames_detected": 53,
+            "object_frame_coverage": 0.8833333333333333,
+            "instances": 2,
+            "instances_detected_in_majority_of_frames": 2
+          }
+        },
+        "moving_by_speed": {
+          "slow <1.5 m/s": {
+            "object_frames": 904,
+            "object_frames_detected": 110,
+            "object_frame_coverage": 0.12168141592920353,
+            "instances": 13,
+            "instances_detected_in_majority_of_frames": 0
+          },
+          "1.5-5 m/s": {
+            "object_frames": 107,
+            "object_frames_detected": 28,
+            "object_frame_coverage": 0.2616822429906542,
+            "instances": 4,
+            "instances_detected_in_majority_of_frames": 1
+          },
+          "fast >=5 m/s": {
+            "object_frames": 569,
+            "object_frames_detected": 468,
+            "object_frame_coverage": 0.8224956063268892,
+            "instances": 14,
+            "instances_detected_in_majority_of_frames": 11
+          }
+        },
+        "parked_vehicles": {
+          "object_frames": 4441,
+          "instances": 81,
+          "object_frames_falsely_removed_ge50pct": 7,
+          "object_frames_touched_ge10pct": 93,
+          "object_frames_untouched": 3774
+        }
+      }
+    }
+  },
+  "class_false_removal_heldout": {
+    "temporal_detector": {
+      "building": {
+        "points": 5499432,
+        "removed": 261,
+        "false_removal_rate": 4.7459446721043194e-05
+      },
+      "fence": {
+        "points": 808410,
+        "removed": 262,
+        "false_removal_rate": 0.00032409297262527676
+      },
+      "other-ground": {
+        "points": 259,
+        "removed": 0,
+        "false_removal_rate": 0.0
+      },
+      "other-structure": {
+        "points": 126050,
+        "removed": 729,
+        "false_removal_rate": 0.0057834192780642606
+      },
+      "parked-car": {
+        "points": 1557461,
+        "removed": 3847,
+        "false_removal_rate": 0.0024700457988996193
+      },
+      "parked-other-vehicle": {
+        "points": 46664,
+        "removed": 0,
+        "false_removal_rate": 0.0
+      },
+      "parking": {
+        "points": 879951,
+        "removed": 16,
+        "false_removal_rate": 1.8182830634887623e-05
+      },
+      "pole": {
+        "points": 243002,
+        "removed": 5002,
+        "false_removal_rate": 0.02058419272269364
+      },
+      "road": {
+        "points": 9217330,
+        "removed": 1405,
+        "false_removal_rate": 0.00015243025908804394
+      },
+      "sidewalk": {
+        "points": 7163255,
+        "removed": 594,
+        "false_removal_rate": 8.292319622853019e-05
+      },
+      "terrain": {
+        "points": 2648734,
+        "removed": 125,
+        "false_removal_rate": 4.719235680140022e-05
+      },
+      "traffic-sign": {
+        "points": 128345,
+        "removed": 942,
+        "false_removal_rate": 0.007339592504577506
+      },
+      "trunk": {
+        "points": 543189,
+        "removed": 1171,
+        "false_removal_rate": 0.002155787396283798
+      },
+      "vegetation": {
+        "points": 4836710,
+        "removed": 2917,
+        "false_removal_rate": 0.0006030959061014615
+      }
+    },
+    "votes_only": {
+      "building": {
+        "points": 5499432,
+        "removed": 1346,
+        "false_removal_rate": 0.00024475254899051396
+      },
+      "fence": {
+        "points": 808410,
+        "removed": 1160,
+        "false_removal_rate": 0.0014349154513180193
+      },
+      "other-ground": {
+        "points": 259,
+        "removed": 0,
+        "false_removal_rate": 0.0
+      },
+      "other-structure": {
+        "points": 126050,
+        "removed": 1081,
+        "false_removal_rate": 0.008575961919873067
+      },
+      "parked-car": {
+        "points": 1557461,
+        "removed": 5961,
+        "false_removal_rate": 0.0038273831575878947
+      },
+      "parked-other-vehicle": {
+        "points": 46664,
+        "removed": 27,
+        "false_removal_rate": 0.0005786044916852391
+      },
+      "parking": {
+        "points": 879951,
+        "removed": 34,
+        "false_removal_rate": 3.86385150991362e-05
+      },
+      "pole": {
+        "points": 243002,
+        "removed": 6027,
+        "false_removal_rate": 0.02480226500193414
+      },
+      "road": {
+        "points": 9217330,
+        "removed": 1569,
+        "false_removal_rate": 0.00017022283025561633
+      },
+      "sidewalk": {
+        "points": 7163255,
+        "removed": 802,
+        "false_removal_rate": 0.00011196027504256096
+      },
+      "terrain": {
+        "points": 2648734,
+        "removed": 625,
+        "false_removal_rate": 0.00023596178400700108
+      },
+      "traffic-sign": {
+        "points": 128345,
+        "removed": 1423,
+        "false_removal_rate": 0.011087303751606997
+      },
+      "trunk": {
+        "points": 543189,
+        "removed": 2081,
+        "false_removal_rate": 0.003831079053515443
+      },
+      "vegetation": {
+        "points": 4836710,
+        "removed": 10317,
+        "false_removal_rate": 0.0021330615232254984
+      }
+    }
+  },
+  "occlusion_boundaries_heldout": {
+    "temporal_detector": {
+      "static_on_depth_boundary": {
+        "points": 8314835,
+        "removed": 9306,
+        "false_removal_rate": 0.0011192044099492052
+      },
+      "static_off_boundary": {
+        "points": 26466758,
+        "removed": 11182,
+        "false_removal_rate": 0.000422492244800062
+      }
+    },
+    "votes_only": {
+      "static_on_depth_boundary": {
+        "points": 8314835,
+        "removed": 21586,
+        "false_removal_rate": 0.0025960827845651776
+      },
+      "static_off_boundary": {
+        "points": 26466758,
+        "removed": 15358,
+        "false_removal_rate": 0.0005802750756250539
+      }
+    }
+  },
+  "mapping": {
+    "raw_unfiltered": {
+      "development": {
+        "resolution_m": 0.2,
+        "points_inserted": 12165962,
+        "occupied_voxels": 369724,
+        "contaminated_voxels": 16600,
+        "contaminated_voxel_fraction": 0.04489835661195919,
+        "moving_points_retained": 68022,
+        "moving_points_total": 68022,
+        "static_points_kept": 12083697,
+        "static_point_retention": 1.0,
+        "static_voxels": 348772,
+        "static_coverage": 1.0,
+        "map_build_s": 6.950436800019816
+      },
+      "eval0": {
+        "resolution_m": 0.2,
+        "points_inserted": 11594113,
+        "occupied_voxels": 457581,
+        "contaminated_voxels": 17590,
+        "contaminated_voxel_fraction": 0.03844128143432529,
+        "moving_points_retained": 410001,
+        "moving_points_total": 410001,
+        "static_points_kept": 11175323,
+        "static_point_retention": 1.0,
+        "static_voxels": 440346,
+        "static_coverage": 1.0,
+        "map_build_s": 11.022575699957088
+      },
+      "eval1": {
+        "resolution_m": 0.2,
+        "points_inserted": 11962778,
+        "occupied_voxels": 388716,
+        "contaminated_voxels": 8787,
+        "contaminated_voxel_fraction": 0.022605192479856758,
+        "moving_points_retained": 48210,
+        "moving_points_total": 48210,
+        "static_points_kept": 11902829,
+        "static_point_retention": 1.0,
+        "static_voxels": 377811,
+        "static_coverage": 1.0,
+        "map_build_s": 11.963507700012997
+      },
+      "eval2": {
+        "resolution_m": 0.2,
+        "points_inserted": 11932706,
+        "occupied_voxels": 185768,
+        "contaminated_voxels": 29854,
+        "contaminated_voxel_fraction": 0.1607058266224538,
+        "moving_points_retained": 328273,
+        "moving_points_total": 328273,
+        "static_points_kept": 11575692,
+        "static_point_retention": 1.0,
+        "static_voxels": 151899,
+        "static_coverage": 1.0,
+        "map_build_s": 4.972132200025953
+      },
+      "heldout_pooled": {
+        "points_inserted": 35489597,
+        "occupied_voxels": 1032065,
+        "contaminated_voxels": 56231,
+        "contaminated_voxel_fraction": 0.054483971455286245,
+        "moving_points_retained": 786484,
+        "moving_points_total": 786484,
+        "static_point_retention": 1.0,
+        "static_coverage": 1.0,
+        "map_build_s": 27.958215599996038
+      }
+    },
+    "temporal_detector": {
+      "development": {
+        "resolution_m": 0.2,
+        "points_inserted": 12098291,
+        "occupied_voxels": 356268,
+        "contaminated_voxels": 3718,
+        "contaminated_voxel_fraction": 0.010435963937260715,
+        "moving_points_retained": 10724,
+        "moving_points_total": 68022,
+        "static_points_kept": 12073971,
+        "static_point_retention": 0.9991951138794691,
+        "static_voxels": 348365,
+        "static_coverage": 0.9988330485245375,
+        "map_build_s": 6.57470190001186
+      },
+      "eval0": {
+        "resolution_m": 0.2,
+        "points_inserted": 11468301,
+        "occupied_voxels": 445939,
+        "contaminated_voxels": 6810,
+        "contaminated_voxel_fraction": 0.015271146950591898,
+        "moving_points_retained": 295929,
+        "moving_points_total": 410001,
+        "static_points_kept": 11163928,
+        "static_point_retention": 0.9989803426710798,
+        "static_voxels": 439383,
+        "static_coverage": 0.9978130833480945,
+        "map_build_s": 11.296130300033838
+      },
+      "eval1": {
+        "resolution_m": 0.2,
+        "points_inserted": 11941567,
+        "occupied_voxels": 385215,
+        "contaminated_voxels": 5821,
+        "contaminated_voxel_fraction": 0.015111041885700194,
+        "moving_points_retained": 32971,
+        "moving_points_total": 48210,
+        "static_points_kept": 11896931,
+        "static_point_retention": 0.999504487546616,
+        "static_voxels": 377287,
+        "static_coverage": 0.9986130631453293,
+        "map_build_s": 12.230523600010201
+      },
+      "eval2": {
+        "resolution_m": 0.2,
+        "points_inserted": 11625886,
+        "occupied_voxels": 162977,
+        "contaminated_voxels": 7092,
+        "contaminated_voxel_fraction": 0.04351534265571216,
+        "moving_points_retained": 24758,
+        "moving_points_total": 328273,
+        "static_points_kept": 11572497,
+        "static_point_retention": 0.9997239905830252,
+        "static_voxels": 151734,
+        "static_coverage": 0.9989137519009341,
+        "map_build_s": 4.287899399991147
+      },
+      "heldout_pooled": {
+        "points_inserted": 35035754,
+        "occupied_voxels": 994131,
+        "contaminated_voxels": 19723,
+        "contaminated_voxel_fraction": 0.019839437659624336,
+        "moving_points_retained": 353658,
+        "moving_points_total": 786484,
+        "static_point_retention": 0.9994087813173049,
+        "static_coverage": 0.9982970055337012,
+        "map_build_s": 27.814553300035186
+      }
+    },
+    "votes_only": {
+      "development": {
+        "resolution_m": 0.2,
+        "points_inserted": 12090319,
+        "occupied_voxels": 354063,
+        "contaminated_voxels": 2448,
+        "contaminated_voxel_fraction": 0.006914023775429797,
+        "moving_points_retained": 9121,
+        "moving_points_total": 68022,
+        "static_points_kept": 12067955,
+        "static_point_retention": 0.9986972530012959,
+        "static_voxels": 347581,
+        "static_coverage": 0.996585161652885,
+        "map_build_s": 6.459350200020708
+      },
+      "eval0": {
+        "resolution_m": 0.2,
+        "points_inserted": 11458197,
+        "occupied_voxels": 443417,
+        "contaminated_voxels": 6435,
+        "contaminated_voxel_fraction": 0.014512298806766542,
+        "moving_points_retained": 295070,
+        "moving_points_total": 410001,
+        "static_points_kept": 11155066,
+        "static_point_retention": 0.998187345457487,
+        "static_voxels": 437437,
+        "static_coverage": 0.9933938312145449,
+        "map_build_s": 11.02433199994266
+      },
+      "eval1": {
+        "resolution_m": 0.2,
+        "points_inserted": 11934418,
+        "occupied_voxels": 383072,
+        "contaminated_voxels": 5098,
+        "contaminated_voxel_fraction": 0.01330820315763094,
+        "moving_points_retained": 31736,
+        "moving_points_total": 48210,
+        "static_points_kept": 11891215,
+        "static_point_retention": 0.999024265575856,
+        "static_voxels": 375956,
+        "static_coverage": 0.9950901376614233,
+        "map_build_s": 11.770255799987353
+      },
+      "eval2": {
+        "resolution_m": 0.2,
+        "points_inserted": 11623215,
+        "occupied_voxels": 162261,
+        "contaminated_voxels": 6570,
+        "contaminated_voxel_fraction": 0.040490321149259524,
+        "moving_points_retained": 23976,
+        "moving_points_total": 328273,
+        "static_points_kept": 11570619,
+        "static_point_retention": 0.9995617540618738,
+        "static_voxels": 151539,
+        "static_coverage": 0.9976300041474927,
+        "map_build_s": 4.275809800019488
+      },
+      "heldout_pooled": {
+        "points_inserted": 35015830,
+        "occupied_voxels": 988750,
+        "contaminated_voxels": 18103,
+        "contaminated_voxel_fraction": 0.01830897597977244,
+        "moving_points_retained": 350782,
+        "moving_points_total": 786484,
+        "static_point_retention": 0.9989339133632621,
+        "static_coverage": 0.9947178307231748,
+        "map_build_s": 27.0703975999495
+      }
+    },
+    "oracle_labels": {
+      "development": {
+        "resolution_m": 0.2,
+        "points_inserted": 12097940,
+        "occupied_voxels": 353506,
+        "contaminated_voxels": 0,
+        "contaminated_voxel_fraction": 0.0,
+        "moving_points_retained": 0,
+        "moving_points_total": 68022,
+        "static_points_kept": 12083697,
+        "static_point_retention": 1.0,
+        "static_voxels": 348772,
+        "static_coverage": 1.0,
+        "map_build_s": 6.411690899985842
+      },
+      "eval0": {
+        "resolution_m": 0.2,
+        "points_inserted": 11184112,
+        "occupied_voxels": 442309,
+        "contaminated_voxels": 0,
+        "contaminated_voxel_fraction": 0.0,
+        "moving_points_retained": 0,
+        "moving_points_total": 410001,
+        "static_points_kept": 11175323,
+        "static_point_retention": 1.0,
+        "static_voxels": 440346,
+        "static_coverage": 1.0,
+        "map_build_s": 12.485471299965866
+      },
+      "eval1": {
+        "resolution_m": 0.2,
+        "points_inserted": 11914568,
+        "occupied_voxels": 380516,
+        "contaminated_voxels": 0,
+        "contaminated_voxel_fraction": 0.0,
+        "moving_points_retained": 0,
+        "moving_points_total": 48210,
+        "static_points_kept": 11902829,
+        "static_point_retention": 1.0,
+        "static_voxels": 377811,
+        "static_coverage": 1.0,
+        "map_build_s": 11.858726400067098
+      },
+      "eval2": {
+        "resolution_m": 0.2,
+        "points_inserted": 11604433,
+        "occupied_voxels": 157025,
+        "contaminated_voxels": 0,
+        "contaminated_voxel_fraction": 0.0,
+        "moving_points_retained": 0,
+        "moving_points_total": 328273,
+        "static_points_kept": 11575692,
+        "static_point_retention": 1.0,
+        "static_voxels": 151899,
+        "static_coverage": 1.0,
+        "map_build_s": 4.118363799992949
+      },
+      "heldout_pooled": {
+        "points_inserted": 34703113,
+        "occupied_voxels": 979850,
+        "contaminated_voxels": 0,
+        "contaminated_voxel_fraction": 0.0,
+        "moving_points_retained": 0,
+        "moving_points_total": 786484,
+        "static_point_retention": 1.0,
+        "static_coverage": 1.0,
+        "map_build_s": 28.462561500025913
+      }
+    }
+  },
+  "runtime_memory": {
+    "development": {
+      "detect_s_per_frame_mean": 0.07585080100223422,
+      "detect_s_per_frame_median": 0.07656934997066855,
+      "detect_s_per_frame_p95": 0.08853502998244948,
+      "detect_s_per_frame_max": 0.17909079999662936,
+      "window_load_s": 0.07813849998638034,
+      "peak_rss_after_load_MB": 267.849728,
+      "peak_rss_after_detection_MB": 532.5824,
+      "peak_rss_end_MB": 674.967552,
+      "scans_in_memory_MB": 198.133824
+    },
+    "eval0": {
+      "detect_s_per_frame_mean": 0.09854661300661974,
+      "detect_s_per_frame_median": 0.0821523999911733,
+      "detect_s_per_frame_p95": 0.17703558999346558,
+      "detect_s_per_frame_max": 0.27726650005206466,
+      "window_load_s": 0.08782130002509803,
+      "peak_rss_after_load_MB": 268.046336,
+      "peak_rss_after_detection_MB": 493.481984,
+      "peak_rss_end_MB": 656.93696,
+      "scans_in_memory_MB": 196.198688
+    },
+    "eval1": {
+      "detect_s_per_frame_mean": 0.08190411199466326,
+      "detect_s_per_frame_median": 0.08007645001634955,
+      "detect_s_per_frame_p95": 0.11092602496501058,
+      "detect_s_per_frame_max": 0.1192458999576047,
+      "window_load_s": 0.08357840008102357,
+      "peak_rss_after_load_MB": 268.480512,
+      "peak_rss_after_detection_MB": 415.06816,
+      "peak_rss_end_MB": 649.023488,
+      "scans_in_memory_MB": 196.54
+    },
+    "eval2": {
+      "detect_s_per_frame_mean": 0.1167789129994344,
+      "detect_s_per_frame_median": 0.10005360003560781,
+      "detect_s_per_frame_p95": 0.24239171001827345,
+      "detect_s_per_frame_max": 0.3094022999284789,
+      "window_load_s": 0.07455809996463358,
+      "peak_rss_after_load_MB": 265.371648,
+      "peak_rss_after_detection_MB": 529.498112,
+      "peak_rss_end_MB": 653.787136,
+      "scans_in_memory_MB": 196.189664
+    },
+    "heldout_pooled": {
+      "detect_s_per_frame_mean": 0.09907654600023913,
+      "detect_s_per_frame_max": 0.3094022999284789,
+      "peak_rss_max_MB": 656.93696
+    }
+  }
+}

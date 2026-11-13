@@ -1,0 +1,115 @@
+{
+  "note": "moving objects with >=10 pts and >=50% in detector range; speed = median centroid displacement over 3-10 frame gaps in world frame (approximate: partial views bias centroids)",
+  "by_speed": {
+    "development": {
+      "<0.5 m/s (near-stationary)": {
+        "moving_points": 0,
+        "point_recall": null,
+        "instances": 0
+      },
+      "0.5-1.5 m/s": {
+        "moving_points": 16009,
+        "point_recall": 0.6091573489911924,
+        "instances": 3
+      },
+      "1.5-5 m/s": {
+        "moving_points": 0,
+        "point_recall": null,
+        "instances": 0
+      },
+      ">=5 m/s": {
+        "moving_points": 55226,
+        "point_recall": 0.83723246297034,
+        "instances": 5
+      }
+    },
+    "eval0": {
+      "<0.5 m/s (near-stationary)": {
+        "moving_points": 279363,
+        "point_recall": 0.010126609465104542,
+        "instances": 4
+      },
+      "0.5-1.5 m/s": {
+        "moving_points": 8336,
+        "point_recall": 0.2526391554702495,
+        "instances": 2
+      },
+      "1.5-5 m/s": {
+        "moving_points": 14106,
+        "point_recall": 0.9041542605983269,
+        "instances": 1
+      },
+      ">=5 m/s": {
+        "moving_points": 103046,
+        "point_recall": 0.8539293131222949,
+        "instances": 4
+      }
+    },
+    "eval1": {
+      "<0.5 m/s (near-stationary)": {
+        "moving_points": 13527,
+        "point_recall": 0.04502106897316478,
+        "instances": 2
+      },
+      "0.5-1.5 m/s": {
+        "moving_points": 24757,
+        "point_recall": 0.41943692692975726,
+        "instances": 4
+      },
+      "1.5-5 m/s": {
+        "moving_points": 3232,
+        "point_recall": 0.07271039603960396,
+        "instances": 3
+      },
+      ">=5 m/s": {
+        "moving_points": 6425,
+        "point_recall": 0.624124513618677,
+        "instances": 3
+      }
+    },
+    "eval2": {
+      "<0.5 m/s (near-stationary)": {
+        "moving_points": 0,
+        "point_recall": null,
+        "instances": 0
+      },
+      "0.5-1.5 m/s": {
+        "moving_points": 4965,
+        "point_recall": 0.0688821752265861,
+        "instances": 1
+      },
+      "1.5-5 m/s": {
+        "moving_points": 0,
+        "point_recall": null,
+        "instances": 0
+      },
+      ">=5 m/s": {
+        "moving_points": 323044,
+        "point_recall": 0.9384480132737336,
+        "instances": 7
+      }
+    },
+    "heldout": {
+      "<0.5 m/s (near-stationary)": {
+        "moving_points": 292890,
+        "point_recall": 0.011738195226876984,
+        "instances": 6
+      },
+      "0.5-1.5 m/s": {
+        "moving_points": 38058,
+        "point_recall": 0.3371695832676441,
+        "instances": 6
+      },
+      "1.5-5 m/s": {
+        "moving_points": 17338,
+        "point_recall": 0.7491636866997347,
+        "instances": 4
+      },
+      ">=5 m/s": {
+        "moving_points": 432515,
+        "point_recall": 0.913642301423072,
+        "instances": 13
+      }
+    }
+  }
+}

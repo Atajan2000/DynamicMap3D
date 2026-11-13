@@ -1,0 +1,15 @@
+{
+  "frozen_at": "2026-11-06T02:42:49",
+  "statement": "Detector configuration and code frozen before any held-out scan was downloaded or evaluated.",
+  "sha256": {
+    "configs/phase1.yaml": "f85737f03228bb0d7a48eaa165d9bd1101ccce46b90945fd299e99566d55653b",
+    "configs/splits.yaml": "9cba2ec218860d0837c44ecff69c9590be900dd6cbc68742f0300b01f7465632",
+    "src/dynamicmap3d/motion/detector.py": "716df7eebe052a1e8a1eb7ec408af3c99fed797eb0e965fcda0df46e3039da3d",
+    "src/dynamicmap3d/motion/range_image.py": "4ca8563b5140ff2bb62fbb17d1a28e27c57b137797a538a32c1f15df4b1dda59",
+    "src/dynamicmap3d/motion/ground.py": "b231ca745409a43ffc6ebd960d61ea0f8ecb72aa97c92c224ef6edb1964a2082",
+    "src/dynamicmap3d/data/kitti.py": "31d72bee4913a37d15327048649c85298fbd2813a74452c6bf016a8beaaf828d",
+    "src/dynamicmap3d/data/window.py": "bb14c7e6f53edeeb960b8122433def177c7d84a3d5a1a5c70c4c3beded84ab36"
+  },
+  "phase1_dev_results_snapshot": "results\\phase2\\dev_phase1_snapshot",
+  "phase1_dev_metrics_sha256": "8ae5082f4c98dd08628949b598eef62e588a0fda55bd540bb5ee4566a10a09e8"
+}

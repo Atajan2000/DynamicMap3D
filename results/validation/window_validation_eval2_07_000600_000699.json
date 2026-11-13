@@ -1,0 +1,81 @@
+{
+  "window": "eval2",
+  "role": "held-out, different sequence from development",
+  "sequence": "07",
+  "first_frame": 600,
+  "last_frame": 699,
+  "scan_crc32_matches_odometry_archive": {
+    "pass": true,
+    "scans": 100,
+    "bad": []
+  },
+  "frames_contiguous_and_complete": {
+    "pass": true,
+    "window_scans": 100,
+    "window_labels": 100,
+    "expected": "600..699",
+    "files_of_other_declared_windows": 0,
+    "undeclared_files": []
+  },
+  "label_point_count_equals_scan_point_count": {
+    "pass": true,
+    "mismatched": [],
+    "points_min": 112735,
+    "points_max": 126171,
+    "points_total": 12261854
+  },
+  "times_and_pose_lengths_consistent": {
+    "pass": true,
+    "times": 1101,
+    "semantickitti_poses": 1101,
+    "kitti_gt_poses": 1101
+  },
+  "window_timestamps_monotonic_10hz": {
+    "pass": true,
+    "dt_min": 0.10124000000000422,
+    "dt_max": 0.10672999999999888,
+    "dt_mean": 0.10397515151515152
+  },
+  "calib_Tr_rigid_and_matches_raw_calibration": {
+    "pass": true,
+    "raw_calibration": "..\\LiDAR-MapLab\\data\\kitti\\raw\\2011_09_30/calib_*.txt (calibration only; raw scans NOT used)",
+    "devkit_drive": "2011_09_30_drive_0027",
+    "max_abs_diff": 4.451994328746878e-14
+  },
+  "pose_alignment_static_structure": {
+    "pass": true,
+    "semantickitti": {
+      "median_of_frame_medians_m": 0.02353116742659746,
+      "max_frame_median_m": 0.036911302681247316
+    },
+    "kitti_gt": {
+      "median_of_frame_medians_m": 0.02422302097672322,
+      "max_frame_median_m": 0.03629848502486478
+    },
+    "identity": {
+      "median_of_frame_medians_m": 0.04290996411333016,
+      "max_frame_median_m": 0.12867568228707657
+    }
+  },
+  "negative_control_identity_poses_misalign_compact_structures": {
+    "pass": true,
+    "median_of_frame_medians_m": {
+      "semantickitti": 0.033311060629978184,
+      "identity": 0.3318033265175945
+    },
+    "frame_gap": 3,
+    "mean_ego_step_m": 0.3412284142323957,
+    "note": "control on all structure aliased along walls (dev: 4.7x) -> compact structures; consecutive frames too close at low ego speed (eval2: 4.5x) -> gap for >= 1 m ego motion"
+  },
+  "moving_points_misalign_under_correct_poses": {
+    "pass": true,
+    "moving_median_of_frame_medians_m": 3.831639951197393,
+    "frames": 95
+  },
+  "pose_sources_step_length_diff_m": {
+    "mean_abs": 0.006677682883743021,
+    "max_abs": 0.030750236544231258,
+    "mean_step_m": 0.34125273151841906
+  },
+  "all_pass": true
+}

@@ -1,0 +1,23 @@
+# Phase 1: temporal geometric motion detection (visibility / free-space consistency).
+# Values are physically motivated defaults (sensor geometry, pose accuracy), NOT tuned on
+# evaluation windows. Any tuning happens on the development window only (configs/splits.yaml).
+pose_source: semantickitti        # poses the labels were produced with (SuMa); kitti_gt also available
+detector:
+  neighbor_offsets: [-10, -6, -3, 3, 6, 10]   # +-0.3 s .. +-1.0 s at 10 Hz
+  min_range: 3.0          # m, ego-vehicle returns and near-field
+  max_range: 50.0         # m, beyond this the 64-beam sampling is too sparse for visibility tests
+  tau_abs: 0.5            # m, free-space tolerance = tau_abs + tau_rel * range
+  tau_rel: 0.02
+  window_half_rows: 1     # conservative minimum over a 3 x 5 pixel neighbourhood
+  window_half_cols: 2
+  min_votes: 2            # >= 2 independent neighbour scans must see through the point
+  min_ratio: 0.5          # and they must be the majority of informative observations
+  ground_cell: 1.0
+  ground_height: 0.25
+  cluster_radius: 0.5
+  min_cluster_points: 10  # dev-tuned (was 20): keeps sparse distant movers (results/phase1/dev_tuning)
+  grow_radius: 0.5
+  grow_min_ratio: 0.2
+  grow_iterations: 0      # dev-tuned (was 2): growth added 7x more FP than TP on the dev window
+  grow_require_vote: true # if growth is re-enabled, never grow into points without a violation
+  spec: {height: 64, width: 2048, fov_up_deg: 3.0, fov_down_deg: -25.0}
