@@ -4,7 +4,7 @@ DynamicMap3D builds static maps from aligned KITTI Odometry scans. It tests whet
 point occupies space that nearby scans observed as free, then filters points with repeated
 evidence of motion. The detector uses supplied poses and up to one second of future scans.
 
-![DynamicMap3D Rerun viewer: held-out SemanticKITTI seq 07, frames 600-699, completed window](assets/demo/dynamicmap3d_overview.png)
+[![DynamicMap3D Rerun viewer: held-out SemanticKITTI seq 07, frames 600-699, completed window](assets/demo/dynamicmap3d_overview.png)](https://youtu.be/esyoNU5KZYc)
 
 *Screenshot of the interactive Rerun viewer (not a rendering), held-out SemanticKITTI seq 07, frames 600–699, after
 the last frame. **A** raw LiDAR map · **B** motion-aware static map, orange = points removed by the detector ·
@@ -18,8 +18,10 @@ measure how well the same configuration transfers across motion regimes.
 
 ## Visual demonstration
 
-The 83-second demo is a local export of the Rerun replay. The screenshot above shows the
-completed Sequence 07 window.
+[Watch the DynamicMap3D demonstration on YouTube](https://youtu.be/esyoNU5KZYc). Click the viewer screenshot above to open the video.
+
+The demonstration compares raw and filtered maps, shows static-geometry preservation,
+and examines missed slow-moving objects in the held-out windows.
 
 Every 3D frame in the video is a window capture of the real Rerun viewer replaying saved detector outputs
 (`results/phase3/predictions/`); the detector is not rerun and nothing is rendered by another tool. Scenes:
